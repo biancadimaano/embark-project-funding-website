@@ -1,3 +1,16 @@
+/* Colours:
+    Black #000000 
+    White #FFFFFF
+    Dark gray #4D4D4D
+    Light gray #B3B3B3
+    Blue #5050FF
+*/
+
 *{
     font-family:'Open Sans', sans-serif
+}
+
+nav{
+    background-color:#5050FF;
+    padding:1rem;
 }
