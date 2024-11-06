@@ -24,7 +24,7 @@ header section{
     margin:6rem 1.5rem;
 }
 
-h1{
+h1, main h2{
     font-family:'Montserrat', sans-serif;
     font-size:2.5rem;
 }
@@ -82,4 +82,12 @@ header p{
 
 main{
     margin:1.5rem;
+}
+
+/* Filter buttons and search bar */
+.button.filter{
+    color:#4D4D4D;
+    font-weight:600; /* Semibold font weight is 600 */
+    border: 0.15rem solid;
+    text-align:left;
 }

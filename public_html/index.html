@@ -55,19 +55,21 @@
         <!-- Maybe make this a div? -->
         <h2>Funding Opportunities</h2>
         <p>Sort by</p>
-        <p>Clear All</p> <!-- Change to a button for JavaScript -->
-        <p>Category</p> <!-- Change to a button for JavaScript -->
-        <p>Type</p> <!-- Change to a button for JavaScript -->
-        <!-- Text input to search -->
-        <input type="text" placeholder="Search by title..." list="opportunities">
-        <datalist id="opportunities">
-            <option value="EcoAction Community Funding Program">
-            <option value="BC Hydro Broad Impact Grants">
-            <option value="Assembly Grant">
-            <option value="Ocean Action Grant">
-            <option value="National Youth Climate Activism Award">
-            <option value="Abundance Fellowship">
-        </datalist>
+        <div class="grid filter">
+            <p>Clear All</p> <!-- Change to a button for JavaScript -->
+            <p class="button filter">Category</p> <!-- Change to a button for JavaScript -->
+            <p class="button filter">Type</p> <!-- Change to a button for JavaScript -->
+            <!-- Text input to search -->
+            <input type="text" placeholder="Search by title..." list="opportunities" class="button filter">
+            <datalist id="opportunities">
+                <option value="EcoAction Community Funding Program">
+                <option value="BC Hydro Broad Impact Grants">
+                <option value="Assembly Grant">
+                <option value="Ocean Action Grant">
+                <option value="National Youth Climate Activism Award">
+                <option value="Abundance Fellowship">
+            </datalist>
+        </div>
 
         <!-- Section of grant/award/program results -->
         <div>
