@@ -14,12 +14,94 @@
             <a href="">Page 2</a>
             <a href="">Page 3</a>
         </nav>
-        <!-- Section header -->
+        <!-- Section title -->
         <h1>Sustainability Project Funding</h1>
+        <!-- Section subtitle -->
         <p>Find grants, awards, and programs to support your sustainability initiatives.</p>
-        <a href="">View All Funding Opportunities</a>
-        <a href="">What types of funding are available?</a>
+        <!-- Buttons -->
+        <a href="">View All Funding Opportunities</a> <!-- Scrolls down to the Funding Opportunities section -->
+        <a href="">What types of funding are available?</a> <!-- Redirects to the Funding Types page -->
      </header>
+     <!-- END Header section -->
+
+     <!-- Quiz prompt section -->
+     <section>
+        <!-- Section header -->
+        <h2>Not sure where to start?</h2>
+        <!-- Section subheader -->
+        <p>Take a quick quiz to find funding opportunities that match your needs!</p>
+        <!-- Button redirecting to the quiz pages -->
+        <a href="">Take the Quiz</a>
+     </section>
+    <!-- END Quiz prompt section -->
+
+     <!-- Funding opportunities section -->
+     <main>
+        <!-- Maybe make this a div? -->
+        <h2>Funding Opportunities</h2>
+        <p>Sort by</p>
+        <p>Clear All</p> <!-- Change to a button for JavaScript -->
+        <p>Category</p> <!-- Change to a button for JavaScript -->
+        <p>Type</p> <!-- Change to a button for JavaScript -->
+        <!-- Text input to search -->
+        <input type="text" placeholder="Search by title..." list="opportunities">
+        <datalist id="opportunities">
+            <option value="EcoAction Community Funding Program">
+            <option value="BC Hydro Broad Impact Grants">
+            <option value="Assembly Grant">
+            <option value="Ocean Action Grant">
+            <option value="National Youth Climate Activism Award">
+            <option value="Abundance Fellowship">
+        </datalist>
+
+        <!-- Section of grant/award/program results -->
+        <div>
+            <p>6 Results</p>
+
+            <!-- EcoAction Community Funding Program - Information Card -->
+            <div>
+                <h3>EcoAction Community Funding Program</h3>
+                <p>Grant</p>
+                <em>$25,000 - $100,000</em>
+                <p>Deadline: October 15</p>
+                <ul>
+                    <li>Climate</li>
+                    <li>Community</li>
+                </ul>
+                <a href="">More Info</a>
+            </div>
+
+            <!-- BC Hydro Broad Impact Grants - Information Card -->
+            <div>
+                <h3>BC Hydro Broad Impact Grants</h3> 
+                <p>Grant</p>
+                <em>$10,000</em>
+                <p>Deadline: March 31</p>
+                <ul>
+                    <li>Clean Energy</li>
+                    <li>Youth</li>
+                    <li>Emergency/Safety</li>
+                </ul>
+                <a href="">More Info</a>
+            </div>
+
+            <!-- Assembly Grant - Information Card -->
+            <div>
+                <h3>Assembly Grant</h3>
+                <p>Grant</p>
+                <em>$500 - $5000</em>
+                <p>Rolling Deadline</p>
+                <ul>
+                    <li>Climate</li>
+                    <li>Youth</li>
+                </ul>
+                <a href="">More Info</a>
+            </div>
+        </div>
+        <!-- END Section of grant/award/program results -->
+
+     </main>
+     <!-- END Funding opportunities section -->
 
 </body>
 </html>
