@@ -57,10 +57,13 @@
         <p>Sort by</p>
         <div class="grid filter">
             <p>Clear All</p> <!-- Change to a button for JavaScript -->
-            <p class="button filter">Category</p> <!-- Change to a button for JavaScript -->
-            <p class="button filter">Type</p> <!-- Change to a button for JavaScript -->
+            <div class="grid filter buttons">
+                <p class="button filter">Category</p> <!-- Change to a button for JavaScript -->
+                <p class="button filter">Type</p> <!-- Change to a button for JavaScript -->
+            </div>
+
             <!-- Text input to search -->
-            <input type="text" placeholder="Search by title..." list="opportunities" class="button filter">
+            <input type="text" placeholder="Search by title..." list="opportunities" class="button filter search">
             <datalist id="opportunities">
                 <option value="EcoAction Community Funding Program">
                 <option value="BC Hydro Broad Impact Grants">

@@ -49,6 +49,7 @@ header p{
     color:white;
     text-decoration:none;
     text-align:center;
+    margin:0;
     padding:1.25rem;
     border-radius:0.85rem;
 }

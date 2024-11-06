@@ -12,3 +12,12 @@
     display:grid;
     row-gap:0.5rem;
 }
+
+.grid.filter.buttons{
+    grid-template-columns: 1fr 1fr;
+    column-gap: 0.5rem;
+}
+
+.grid.button.filter.search{
+    grid-template-columns: 1fr;
+}
