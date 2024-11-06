@@ -14,7 +14,7 @@
 	 ========================================================================== */
 
 /* Navigation bar */
-nav{
+.nav-bar{
     margin:0;
     background-color:#5050FF;
     padding:1rem;
@@ -22,12 +22,6 @@ nav{
 
 header section{
     margin:6rem 1.5rem;
-    text-align:center;
-}
-
-/* Content */
-header h1, header p{
-    text-align:left;
 }
 
 h1{
@@ -37,4 +31,24 @@ h1{
 
 header p{
     font-size:1.05rem;
+    margin-bottom:2rem;
+}
+
+.button.blue{
+    background-color:#5050FF;
+}
+
+.button.gray{
+    background-color:#B3B3B3;
+}
+
+.button{
+    font-family:'Montserrat', sans-serif;
+    font-weight:bold;
+    font-size:0.9rem;
+    color:white;
+    text-decoration:none;
+    text-align:center;
+    padding:1.25rem;
+    border-radius:0.85rem;
 }

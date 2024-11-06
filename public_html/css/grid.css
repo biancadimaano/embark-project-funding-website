@@ -1,0 +1,14 @@
+/* .homepage-header{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+} */
+
+*{
+    box-sizing:border-box;
+}
+
+.grid{
+    display:grid;
+    row-gap:0.5rem;
+}
