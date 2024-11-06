@@ -85,10 +85,18 @@ main{
     margin:1.5rem;
 }
 
+main .text.light-gray{
+    color:#B3B3B3;
+    font-weight:600; /* Semibold font weight is 600 */
+    font-size:1.25rem;
+    margin:-0.5rem 0 0.75rem 0;
+}
+
 /* Filter buttons and search bar */
 .button.filter{
     color:#4D4D4D;
     font-weight:600; /* Semibold font weight is 600 */
     border: 0.15rem solid;
     text-align:left;
+    font-size:1rem;
 }
