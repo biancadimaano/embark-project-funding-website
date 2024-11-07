@@ -29,9 +29,14 @@ h1, main h2{
     font-size:2.5rem;
 }
 
+h1{
+    max-width:24.375rem;
+}
+
 header p{
     font-size:1.05rem;
     margin-bottom:2rem;
+    max-width:20rem;
 }
 
 .button.blue{
@@ -145,7 +150,7 @@ main .text.light-gray{
 .info-card .text.type{ 
     font-weight:normal;
     font-size:1rem;
-    color:#B3B3B3;
+    color:#4D4D4D;
     margin-bottom:0.5rem;
 }
 
@@ -176,12 +181,13 @@ main .text.light-gray{
 .info-card .button.filter.inline{
     color:#5050FF;
     text-align:center;
+    font-family:'Open Sans', sans-serif;
     font-size:1rem;
     font-weight:normal;
-    padding:0.5rem 1.5rem;
+    padding:0.25rem 1rem;
     border-radius:0.35rem;
-    margin-top:0.65rem;
-    margin-right:0.5rem;
+    margin-top:0.45rem;
+    margin-right:0.25rem;
 }
 
 /* Styling the "More info" button */
