@@ -85,6 +85,7 @@ main{
     margin:1.5rem;
 }
 
+/* Styling the "Sort by" text */
 main .text.light-gray{
     color:#B3B3B3;
     font-weight:600; /* Semibold font weight is 600 */
@@ -92,11 +93,62 @@ main .text.light-gray{
     margin:-0.5rem 0 0.75rem 0;
 }
 
-/* Filter buttons and search bar */
+/* Styling the filter buttons (Category and Type buttons) and search bar */
 .button.filter{
     color:#4D4D4D;
     font-weight:600; /* Semibold font weight is 600 */
     border: 0.15rem solid;
     text-align:left;
     font-size:1rem;
+}
+
+/* Styling the "6 results" text */
+.results p{
+    font-family:'Montserrat', sans-serif;
+    font-weight:bold;
+    font-size:1.4rem;
+    margin-top:2.5rem;
+}
+
+/* Styling the information card div */
+.info-card{
+    border: 0.15rem solid #4D4D4D;
+    border-radius: 0.85rem;
+    padding: 0 1.5rem;
+}
+
+/* Setting the information card text to Open Sans*/
+.info-card p{
+    font-family:'Open Sans', sans-serif;
+    
+}
+
+/* Styling the title for the information cards */
+.info-card h3{
+    font-weight:normal;
+    font-size:1.4rem;
+    margin-bottom:-1.75rem;
+}
+
+/* Styling the grant type for the information cards */
+.info-card .text.type{ 
+    font-weight:normal;
+    font-size:1rem;
+    color:#B3B3B3;
+    margin-bottom:0.5rem;
+}
+
+/* Styling the grant amount for the information cards */
+.info-card em{
+    font-weight:600;
+    font-size:1.65rem;
+    font-style:normal;
+}
+
+/* Styling the application deadline for the information cards */
+.info-card .text.deadline{
+    font-weight:normal;
+    font-size:1.25rem;
+    font-style:normal;
+    margin-top:0.5rem;
 }
