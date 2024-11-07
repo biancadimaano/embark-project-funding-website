@@ -19,6 +19,18 @@
     column-gap: 0.5rem;
 }
 
+.grid.button.filter.search{
+    grid-template-columns: 1fr;
+}
+
+.button.filter.inline{
+    display:inline-block;
+}
+
+.info-card a{
+    display: block;
+}
+
 /* 574px / 16px = 35.875rem */
 @media (width > 35.875rem){
     header .grid{
@@ -101,16 +113,12 @@
     .quiz-prompt h2{
         font-size:1.65rem;
     }
-}
 
-.grid.button.filter.search{
-    grid-template-columns: 1fr;
-}
+    .grid.filter{
+        grid-template-columns: 1fr 1fr 2fr;
+        column-gap: 1rem !important;
+    }
 
-.button.filter.inline{
-    display:inline-block;
-}
 
-.info-card a{
-    display: block;
+
 }
