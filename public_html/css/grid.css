@@ -13,11 +13,19 @@
     row-gap:0.5rem;
 }
 
-.grid.filter.buttons, .info-card .grid{
+.grid.filter.buttons{
     grid-template-columns: 1fr 1fr;
     column-gap: 0.5rem;
 }
 
 .grid.button.filter.search{
     grid-template-columns: 1fr;
+}
+
+.button.filter.inline{
+    display:inline-block;
+}
+
+.info-card a{
+    display: block;
 }
