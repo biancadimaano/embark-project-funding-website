@@ -114,8 +114,8 @@ main .text.light-gray{
 /* Styling the information card div */
 .info-card{
     border: 0.15rem solid #4D4D4D;
-    border-top-left-radius: 0.85rem;
-    border-top-right-radius: 0.85rem;
+    border-top-left-radius: 1.25rem;
+    border-top-right-radius: 1.25rem;
     margin-bottom:2rem;
     z-index:1;
 }
@@ -177,38 +177,31 @@ main .text.light-gray{
     margin-right:0.5rem;
 }
 
-/* Styling the more info button */
-.info-card a{
-    background-color:#4D4D4D;
-    font-weight:600; /* Semibold font weight is 600 */
-    text-align:center;
-    font-size:1.35rem;
-    color:white;
-    width:100%;
+/* Styling the "More info" button */
+.info-card.more-info, .info-card.more-info a {
+    background-color: #4D4D4D;
+    font-weight: 600; /* Semibold font weight is 600 */
+    text-align: center;
+    font-size: 1.35rem;
+    color: white;
+    width: 100%;
+    text-decoration: none;
+    border-bottom-left-radius: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
+    z-index: 2;
+}
+
+.info-card.more-info {
+    margin-top: -2.75rem;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.info-card.more-info a {
     padding: 1rem;
-    text-decoration:none;
-    border-bottom-left-radius:0.5rem;
-    border-bottom-right-radius:0.5rem;
-    z-index:2;
 }
 
-.info-card.more-info{
-    background-color:#4D4D4D;
-    font-weight:600; /* Semibold font weight is 600 */
-    text-align:center;
-    font-size:1.35rem;
-    color:white;
-    width:100%;
-    margin-top:-2.75rem;
-    text-decoration:none;
-    border-top-left-radius:0;
-    border-top-right-radius:0;
-    border-bottom-left-radius:0.5rem;
-    border-bottom-right-radius:0.5rem;
-    z-index:2;
-}
-
-.info-card.more-info:hover,.info-card.more-info a:hover{
+.info-card.more-info:hover,.info-card.more-info:focus,.info-card.more-info a:hover,.info-card.more-info a:focus{
     background-color:#5050FF;
     border-color:#5050FF;
 }
