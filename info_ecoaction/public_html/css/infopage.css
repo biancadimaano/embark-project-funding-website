@@ -52,3 +52,33 @@ h1{
 main{
     margin:1.5rem;
 }
+
+/* Styling the information card div */
+.info-card{
+    border: 0.15rem solid #4D4D4D;
+    border-top-left-radius: 1.25rem;
+    border-top-right-radius: 1.25rem;
+    margin-bottom:2rem;
+    z-index:1;
+}
+
+/* Styling the grant amount */
+.info-card em{
+    font-weight:600; /* Semibold font weight is 600 */
+    font-size:2rem;
+    font-style:normal;
+    padding:0 1.5rem;   
+}
+
+/* Styling the grant headings */
+.info-card h2{
+    font-weight:normal;
+    font-size:1rem;
+    padding:0 1.5rem;   
+}
+
+/* Styling the grant information */
+.info-card p{
+    font-family:'Open Sans', sans-serif;
+    padding:0 1.5rem;   
+}
