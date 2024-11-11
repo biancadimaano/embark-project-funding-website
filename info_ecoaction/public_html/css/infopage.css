@@ -9,3 +9,46 @@
 *{
     font-family:'Open Sans', sans-serif;
 }
+
+/* Header
+	 ========================================================================== */
+
+/* Navigation bar */
+.nav-bar{
+    margin:0;
+    background-color:#5050FF;
+    padding:1rem;
+}
+
+header section{
+    margin:1.5rem 1.5rem;
+}
+
+header section a{
+    font-family:'Montserrat', sans-serif;
+    font-weight:bold;
+    font-size:0.95rem;
+    display:block;
+    color:#4D4D4D;
+    text-decoration:none;
+}
+
+header section p{
+    font-weight: 600;
+    color:#4D4D4D;
+    font-size:1.25rem;
+    margin-top:2rem;
+}
+
+h1{
+    font-family:'Montserrat', sans-serif;
+    font-size:2.25rem;
+    margin:-0.25rem 0 -0.75rem 0;
+}
+
+/* Info card
+	 ========================================================================== */
+
+main{
+    margin:1.5rem;
+}
