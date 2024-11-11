@@ -1,0 +1,124 @@
+/* .homepage-header{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+} */
+
+*{
+    box-sizing:border-box;
+}
+
+.grid{
+    display:grid;
+    row-gap:0.5rem;
+}
+
+
+.grid.filter.buttons{
+    grid-template-columns: 1fr 1fr;
+    column-gap: 0.5rem;
+}
+
+.grid.button.filter.search{
+    grid-template-columns: 1fr;
+}
+
+.button.filter.inline{
+    display:inline-block;
+}
+
+.info-card a{
+    display: block;
+}
+
+/* 574px / 16px = 35.875rem */
+@media (width > 35.875rem){
+    header .grid{
+        grid-template-columns: 1fr 1fr;
+        column-gap: 0.5rem;
+    }
+
+    .quiz-prompt{
+        display:block;
+    }
+
+    .button.white{
+        display:inline-block;
+        padding:1rem 2rem !important;
+    }
+
+}
+
+@media (width > 43.125rem){
+    header section .grid{
+        max-width:40.25rem;
+    }
+    
+}
+
+@media (width > 49.875rem){
+    .grid.results{
+        grid-template-columns: 1fr 1fr;
+        column-gap:0.75rem;
+    }
+
+    /* INCLUDE RESOURCE ****************************************** */
+    .info-card:not(.more-info){
+        height:16.25rem;
+    } 
+
+    .info-card h3{
+        max-width:20rem;
+    }
+
+    .info-card .button{
+        max-width:33%;
+        overflow:hidden;
+        text-wrap:nowrap;
+        text-overflow:ellipsis; /* Resource: https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow */
+    }
+}
+
+@media (width > 64.5625rem){
+    header section{
+        margin-left:20vw;
+    }
+
+    .quiz-prompt h2, .quiz-prompt p, .quiz-prompt a{
+        margin-left:18vw;
+    }
+
+    header section{
+        text-align:left;
+    }
+
+    header section .grid{
+        max-width:41rem;
+    }
+
+    h1{
+        font-size:2.75rem;
+        max-width:30rem;
+    }
+
+    header p{
+        font-size:1.25rem;
+        max-width:24rem;
+    }
+
+    main{
+        margin:5rem;
+    }
+
+    .quiz-prompt h2{
+        font-size:1.65rem;
+    }
+
+    .grid.filter{
+        grid-template-columns: 1fr 1fr 2fr;
+        column-gap: 1rem !important;
+    }
+
+
+
+}

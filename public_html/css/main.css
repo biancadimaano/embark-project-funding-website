@@ -116,7 +116,7 @@ main .text.light-gray{
 }
 
 /* Styling the "6 results" text */
-.results p{
+.text.gray{
     font-family:'Montserrat', sans-serif;
     font-weight:bold;
     font-size:1.4rem;
@@ -142,7 +142,7 @@ main .text.light-gray{
 .info-card h3{
     font-weight:normal;
     font-size:1.4rem;
-    margin-bottom:-1.75rem;
+    margin-bottom:-0.25rem;
     padding:0 1.5rem;   
 }
 
@@ -188,6 +188,7 @@ main .text.light-gray{
     border-radius:0.35rem;
     margin-top:0.45rem;
     margin-right:0.25rem;
+
 }
 
 /* Styling the "More info" button */
