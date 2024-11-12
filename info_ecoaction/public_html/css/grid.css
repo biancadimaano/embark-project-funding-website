@@ -125,9 +125,4 @@
     main section p, main section ul{
         max-width:none;
     }
-
-    /* Make info card border width thinner for bigger screens */
-    .info-card, .info-card .button{
-        border-width:0.1rem;
-    }
 }
