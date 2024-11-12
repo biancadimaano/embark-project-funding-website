@@ -160,19 +160,17 @@ main{
     border-color:#5050FF;
     text-align: center;
     font-size: 1.35rem;
-    padding:1rem;
+    padding:1rem 6.56rem;
     border-bottom-left-radius: 0.75rem;
     border-bottom-right-radius: 0.75rem;
-    margin:-0.25rem 0 3rem 0;
+    margin:-0.25rem 0 2rem 0;
     max-width:21.5rem;
     z-index: 2;
-}
-
-a{
     color:white;
     text-decoration: none;
     font-family:'Montserrat', sans-serif;
     font-weight: bold;
+    display:inline-block;
 }
 
 .learn-more:hover, .learn-more:focus{

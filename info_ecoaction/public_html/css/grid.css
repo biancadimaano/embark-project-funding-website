@@ -44,7 +44,7 @@
     
     .requirements {
         grid-area: requirements;
-        margin-top:-18rem;
+        margin-top:-15rem !important;
         margin-right:2.5rem;
     }
 
