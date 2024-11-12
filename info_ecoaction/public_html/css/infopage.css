@@ -58,8 +58,27 @@ main{
     border: 0.15rem solid #4D4D4D;
     border-top-left-radius: 1.25rem;
     border-top-right-radius: 1.25rem;
-    margin-bottom:2rem;
     z-index:1;
+}
+
+/* Styling the "Learn More!" button */
+.learn-more{
+    background-color: #5050FF;
+    border-color:#5050FF;
+    text-align: center;
+    font-size: 1.35rem;
+    padding:1rem;
+    border-bottom-left-radius: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
+    margin:-0.25rem 0 2rem 0;
+    z-index: 2;
+}
+
+.learn-more a{
+    color:white;
+    text-decoration: none;
+    font-family:'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
 /* Styling the grant amount */
