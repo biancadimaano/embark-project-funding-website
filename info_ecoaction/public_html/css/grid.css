@@ -13,7 +13,7 @@
 
     main {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 30rem 1fr;
         grid-template-areas:
             "info description"
             "info requirements";
@@ -25,12 +25,53 @@
     
     .description {
         grid-area: description;
-        margin-left:-5rem;
+        margin-right:2.5rem;
     }
     
     .requirements {
         grid-area: requirements;
         margin-top:-18rem;
-        margin-left:-5rem;
+        margin-right:2.5rem;
+    }
+
+    header section{
+        margin-top:3rem;
+        margin-left:4rem;
+    }
+
+    header section a{
+        margin-bottom:3rem;
+    }
+
+    .info-card, .learn-more{
+        margin-left:2.5rem;
+    }
+
+    /* Make the learn more button at the bottom of the screen not render on the page */
+    main section .learn-more{
+        display:none; /* Resource: https://www.freecodecamp.org/news/css-display-none-and-visibility-hidden-the-difference/ */
+    }
+
+}
+
+@media (width > 80.6875rem)
+{
+    .requirements{
+        margin-top:-21rem;
+    }
+}
+@media (width > 98.875rem){
+    header section, main{
+        max-width:75%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    header section{
+        padding-left:2.5rem;
+    }
+
+    main section p, main section ul{
+        max-width:none;
     }
 }
