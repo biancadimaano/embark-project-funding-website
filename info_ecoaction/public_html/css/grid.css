@@ -44,7 +44,7 @@
     
     .requirements {
         grid-area: requirements;
-        margin-top:-15rem !important;
+        margin-top:-18rem !important;
         margin-right:2.5rem;
     }
 
@@ -97,7 +97,7 @@
 @media (width > 80.6875rem)
 {
     .requirements{
-        margin-top:-21rem;
+        margin-top:-20rem !important;
     }
 }
 
