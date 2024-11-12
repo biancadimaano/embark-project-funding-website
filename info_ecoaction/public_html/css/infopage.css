@@ -29,7 +29,7 @@
 .nav-bar ul{
     position:absolute;
     width:100%;
-    margin:0 0 0 -1rem;
+    margin:3rem 0 0 -1rem;
     padding:2rem 2rem 1rem 1.75rem;
     background-color:#5050FF;
     list-style:none;
@@ -40,15 +40,27 @@
 
 .nav-bar li{
     margin-bottom:1rem;
+    font-family:'Open Sans', sans-serif !important;
 }
 
 .nav-bar li a{
     color:white;
     text-decoration:none;
+    font-family:'Open Sans', sans-serif;
+    font-weight:normal;
+    font-size:1.25rem;
 }
 
 .nav-bar li a:hover, .nav-bar li a:focus{
     text-decoration:underline;
+}
+
+.nav-item.logo{
+    color:white;
+    font-size:7.5rem;
+    position:absolute;
+    top:-10rem;
+    z-index:4;
 }
 
 /* Making the hamburger menu show on the screen when the icon is checked
@@ -99,7 +111,7 @@ header section a{
     font-family:'Montserrat', sans-serif;
     font-weight:bold;
     font-size:0.95rem;
-    display:block;
+    display:inline-block;
     color:#4D4D4D;
     text-decoration:none;
 }
@@ -156,17 +168,17 @@ main{
     z-index: 2;
 }
 
-.learn-more:hover, .learn-more:focus{
-    background-color:#4D4D4D;
-    text-decoration:underline;
-    text-decoration-color:white; /* Resource: https://www.w3schools.com/cssref/css3_pr_text-decoration-color.php */
-}
-
-.learn-more a{
+a{
     color:white;
     text-decoration: none;
     font-family:'Montserrat', sans-serif;
     font-weight: bold;
+}
+
+.learn-more:hover, .learn-more:focus{
+    background-color:#4D4D4D;
+    text-decoration:underline;
+    text-decoration-color:white; /* Resource: https://www.w3schools.com/cssref/css3_pr_text-decoration-color.php */
 }
 
 /* Styling the grant amount */

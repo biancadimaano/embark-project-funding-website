@@ -18,6 +18,10 @@
     display:inline-block;
 }
 
+/* One issue: 
+    Navigation bar breaks when the hamburger menu is open and then reaches this breakpoint
+    Fix: Need JavaScript to uncheck the hamburger menu checkbox
+*/
 @media (width > 65rem){
     /* Resource for grid template areas: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas 
         Allows for info-card to be in its own column on the left, while description and requirements are in their own column on the right. */
@@ -52,7 +56,7 @@
 
     header section a{
         margin-top:6rem;
-        margin-bottom:3rem;
+        margin-bottom:1rem;
     }
 
     .info-card, .learn-more{
@@ -70,7 +74,12 @@
     }
 
     .nav-bar{
-        margin-bottom:3rem;
+        margin-top:-4rem;
+        margin-bottom:4rem;
+    }
+
+    .nav-item.logo{
+        margin-left:2.5rem;
     }
 
     .nav-bar ul {
@@ -80,8 +89,7 @@
     }
 
     .nav-bar li {
-        font-size:1.25rem;
-        margin:-1.25rem 0 0.5rem 4rem;
+        margin:-0.7rem 0 0.5rem 4rem;
     }
 
 }
@@ -104,6 +112,10 @@
 
     .nav-bar ul{
         padding-right:12.5%;
+    }
+
+    .nav-item.logo{
+        margin-left:12.5%;
     }
 
     header section{
