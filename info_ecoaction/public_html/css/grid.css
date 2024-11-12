@@ -8,6 +8,11 @@
     box-sizing:border-box;
 }
 
+.nav-bar {
+    display: flex; 
+    justify-content: space-between;
+}
+
 /* Need to change em to inline-block so that margin-top can apply */
 .info-card em, .button.filter.inline{
     display:inline-block;

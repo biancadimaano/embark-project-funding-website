@@ -26,6 +26,69 @@
     padding:1rem;
 }
 
+.nav-bar ul{
+    position:absolute;
+    width:100%;
+    margin:0 0 0 -1rem;
+    padding:2rem 2rem 1rem 1.75rem;
+    background-color:#5050FF;
+    list-style:none;
+    box-shadow: 0 1.5rem 1.25rem rgba(0, 0, 0, 0.329); /* Drop shadow, Resource: https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
+    display:none; /* Makes the menu not show up/not render, Resource: https://www.freecodecamp.org/news/css-display-none-and-visibility-hidden-the-difference/ */
+    z-index:1;
+}
+
+.nav-bar li{
+    margin-bottom:1rem;
+}
+
+.nav-bar li a{
+    color:white;
+    text-decoration:none;
+}
+
+.nav-bar li a:hover, .nav-bar li a:focus{
+    text-decoration:underline;
+}
+
+/* Making the hamburger menu show on the screen when the icon is checked
+    Resource: https://www.w3schools.com/cssref/sel_element_pluss.php */
+.hamburger-menu:checked + ul {
+    display: block; /* Show the ul when the checkbox is checked */
+}
+
+/* Styling for a hamburger-menu icon 
+    Resource: https://verpex.com/blog/website-tips/how-to-create-a-responsive-hamburger-menu-using-css */
+.hamburger-menu {
+    --s: 2rem; /* size */
+    width: var(--s);
+    aspect-ratio: 1;
+    padding: calc(var(--s)*.1);
+    box-sizing: border-box;
+    background:
+      radial-gradient(closest-side at 12.5% 25%,white 96%,#0000) 0 0/80% 40%,
+      linear-gradient(white 50%,#0000 0) top/80% 40% repeat-y;
+    
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+
+    margin-left: auto;
+    z-index:2;
+}
+
+/* Styling for a hamburger-menu icon 
+    Resource: https://verpex.com/blog/website-tips/how-to-create-a-responsive-hamburger-menu-using-css */
+.hamburger-menu:checked {
+    background: 
+        radial-gradient(closest-side at 50% 12.5%,white 96%,#0000) top /20% 80% repeat-y,
+        radial-gradient(closest-side at 12.5% 50%,white 96%,#0000) left/80% 20% repeat-x,
+        conic-gradient(from 90deg at 33% 33%, #0000 90deg, white 0)
+        100% 100%/60% 60% padding-box content-box;
+    transform: translateZ(0) rotate(45deg);
+}
+
 /* Adding margins to the header section */
 header section{
     margin:1.5rem 1.5rem;
