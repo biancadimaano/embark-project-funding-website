@@ -20,10 +20,12 @@
     padding:1rem;
 }
 
+/* Adding margins to the header section */
 header section{
     margin:1.5rem 1.5rem;
 }
 
+/* Styling the "Go Back to Funding Opportunities" button */
 header section a{
     font-family:'Montserrat', sans-serif;
     font-weight:bold;
@@ -33,6 +35,7 @@ header section a{
     text-decoration:none;
 }
 
+/* Styling the header section paragraphs -> Location and Organization */
 header section p{
     font-weight: 600;
     color:#4D4D4D;
@@ -40,6 +43,7 @@ header section p{
     margin-top:2rem;
 }
 
+/* Styling the page title */
 h1{
     font-family:'Montserrat', sans-serif;
     font-size:2.25rem;
@@ -143,26 +147,31 @@ main{
 
 /* Description & Requirements
 	 ========================================================================== */
-     
+
+/* Styling the section titles */
 main section h2{
     font-size:2rem;
     font-weight:600; /* Semibold font weight is 600 */
 }
 
+/* Styling the paragraphs and requirement list */
 main section p, main section ul{
     color:#4D4D4D;
     font-size:1rem;
     margin-top:-0.75rem;
 }
 
+/* Adding top and bottom margins to requirements */
 .requirements{
     margin:2.5rem 0 2.5rem 0;
 }
 
+/* Adding top, bottom, and left margins to the requirement list */
 main section ul{
     margin:-0.25rem 0 1.5rem -1.25rem;
 }
 
+/* Adding top margin and rounding corners of the Learn More! button */
 main section .learn-more{
     margin-top:2rem;
     border-radius:0.75rem;
