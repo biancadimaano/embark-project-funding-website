@@ -35,6 +35,11 @@ header section a{
     text-decoration:none;
 }
 
+header section a:hover, header section a:focus{
+    color:#5050FF;
+    text-decoration:underline;
+}
+
 /* Styling the header section paragraphs -> Location and Organization */
 header section p{
     font-weight: 600;
@@ -48,6 +53,7 @@ h1{
     font-family:'Montserrat', sans-serif;
     font-size:2.25rem;
     margin:-0.25rem 0 -0.75rem 0;
+    max-width:26.5rem;
 }
 
 /* Info card
@@ -61,8 +67,9 @@ main{
 .info-card{
     border: 0.15rem solid #4D4D4D;
     margin-top:2.5rem;
-    border-top-left-radius: 0.75rem;;
-    border-top-right-radius: 0.75rem;;
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+    max-width:21.5rem;
     z-index:1;
 }
 
@@ -73,10 +80,17 @@ main{
     text-align: center;
     font-size: 1.35rem;
     padding:1rem;
-    border-bottom-left-radius: 0.75rem;;
-    border-bottom-right-radius: 0.75rem;;
+    border-bottom-left-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
     margin:-0.25rem 0 3rem 0;
+    max-width:21.5rem;
     z-index: 2;
+}
+
+.learn-more:hover, .learn-more:focus{
+    background-color:#4D4D4D;
+    text-decoration:underline;
+    text-decoration-color:white; /* Resource: https://www.w3schools.com/cssref/css3_pr_text-decoration-color.php */
 }
 
 .learn-more a{
@@ -159,6 +173,7 @@ main section p, main section ul{
     color:#4D4D4D;
     font-size:1rem;
     margin-top:-0.75rem;
+    max-width:31.5em;
 }
 
 /* Adding top and bottom margins to requirements */

@@ -6,3 +6,31 @@
 .info-card em, .button.filter.inline{
     display:inline-block;
 }
+
+@media (width > 65rem){
+    /* Resource for grid template areas: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas 
+        Allows for info-card to be in its own column on the left, while description and requirements are in their own column on the right. */
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "info description"
+            "info requirements";
+    }
+
+    .info-card {
+        grid-area: info;
+    }
+    
+    .description {
+        grid-area: description;
+        margin-left:-5rem;
+    }
+    
+    .requirements {
+        grid-area: requirements;
+        margin-top:-18rem;
+        margin-left:-5rem;
+    }
+}
