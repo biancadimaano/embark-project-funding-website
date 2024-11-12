@@ -1,3 +1,8 @@
 *{
     box-sizing:border-box;
 }
+
+/* Need to change em to inline-block so that margin-top can apply */
+.info-card em, .button.filter.inline{
+    display:inline-block;
+}
