@@ -1,3 +1,9 @@
+/* grid.css
+    Contains main CSS rules for formatting such as display rules and media queries.    
+
+    Author: Bianca Dimaano 301550989, email: fbd1@sfu.ca
+*/
+
 *{
     box-sizing:border-box;
 }
@@ -10,7 +16,6 @@
 @media (width > 65rem){
     /* Resource for grid template areas: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas 
         Allows for info-card to be in its own column on the left, while description and requirements are in their own column on the right. */
-
     main {
         display: grid;
         grid-template-columns: 30rem 1fr;
@@ -34,6 +39,7 @@
         margin-right:2.5rem;
     }
 
+    /* Modifying margins for header title and paragraphs, and info card */
     header section{
         margin-top:3rem;
         margin-left:4rem;
@@ -61,6 +67,8 @@
     }
 }
 @media (width > 98.875rem){
+
+    /* Modifying margins for header title and paragraphs, and main section with info card + description + requirements */
     header section, main{
         max-width:75%;
         margin-left:auto;
@@ -73,5 +81,10 @@
 
     main section p, main section ul{
         max-width:none;
+    }
+
+    /* Make info card border width thinner for bigger screens */
+    .info-card, .info-card .button{
+        border-width:0.1rem;
     }
 }
