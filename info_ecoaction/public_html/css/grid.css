@@ -51,6 +51,7 @@
     }
 
     header section a{
+        margin-top:6rem;
         margin-bottom:3rem;
     }
 
@@ -63,6 +64,26 @@
         display:none; /* Resource: https://www.freecodecamp.org/news/css-display-none-and-visibility-hidden-the-difference/ */
     }
 
+    /* Switching from hamburger menu to normal navigation bar */
+    .hamburger-menu {
+        display: none; /* Hide the hamburger menu */
+    }
+
+    .nav-bar{
+        margin-bottom:3rem;
+    }
+
+    .nav-bar ul {
+        display: flex;
+        justify-content: flex-end;
+        box-shadow:0 0 0 0;
+    }
+
+    .nav-bar li {
+        font-size:1.25rem;
+        margin:-1.25rem 0 0.5rem 4rem;
+    }
+
 }
 
 @media (width > 80.6875rem)
@@ -71,6 +92,7 @@
         margin-top:-21rem;
     }
 }
+
 @media (width > 98.875rem){
 
     /* Modifying margins for header title and paragraphs, and main section with info card + description + requirements */
@@ -78,6 +100,10 @@
         max-width:75%;
         margin-left:auto;
         margin-right:auto;
+    }
+
+    .nav-bar ul{
+        padding-right:12.5%;
     }
 
     header section{
