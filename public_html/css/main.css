@@ -124,7 +124,7 @@ main .text{
 /* Changing the outline colour when selecting the "Search by title..." button
     --> Resource for changing the outline colour when selecting a text input:
         https://stackoverflow.com/questions/43427993/change-the-color-of-a-input-field-when-selected */
-.button.filter.search:focus{
+.button.filter:focus{
     outline-color:#6F9E94;
 }
 
@@ -134,4 +134,9 @@ main .text{
     font-weight:bold;
     font-size:1.4rem;
     margin:2.5rem 0 -1rem 0;
+}
+
+/* Setting the placeholder option to hidden so it is not displayed when the dropdown menu is open */
+.dropdown-hidden{
+    display:none;
 }

@@ -58,8 +58,20 @@
         <p class="text light-gray">Sort by</p> <!-- Change to a button for JavaScript -->
         <div class="grid filter">
             <div class="grid filter buttons">
-                <p class="button filter">Category</p> <!-- Change to a button for JavaScript -->
-                <p class="button filter">Type</p> <!-- Change to a button for JavaScript -->
+                <select name="category" class="button filter" id="category-filter" aria-label="Filter funding opportunities by category">
+                    <option value="" disabled selected class="dropdown-hidden">Category</option> <!-- Resource for placeholder for <select> tag: https://stackoverflow.com/questions/5805059/how-do-i-make-a-placeholder-for-a-select-box -->
+                    <option value="clean-energy">Clean Energy</option>
+                    <option value="climate">Climate</option>
+                    <option value="community">Community</option>
+                    <option value="emergency/safety">Emergency/Safety</option>
+                    <option value="youth">Youth</option>
+                </select>
+                <select name="type" class="button filter" id="type-filter" aria-label="Filter funding opportunities by type">
+                    <option value="" disabled selected class="dropdown-hidden">Type</option> <!-- Resource for placeholder for <select> tag: https://stackoverflow.com/questions/5805059/how-do-i-make-a-placeholder-for-a-select-box -->
+                    <option value="grant">Grants</option>
+                    <option value="award">Awards</option>
+                    <option value="program">Programs</option>
+                </select>
             </div>
 
             <!-- Text input to search -->
