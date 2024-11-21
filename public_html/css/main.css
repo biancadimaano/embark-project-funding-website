@@ -98,9 +98,17 @@ main{
 /* Styling the "Sort by" text */
 main .text.light-gray{
     color:#B3B3B3;
+    margin:-0.5rem 0 0.75rem 0;
+}
+
+main .text.green{
+    color:#6F9E94;
+    margin:0.85rem 0 0.75rem 0;
+}
+
+main .text{
     font-weight:600; /* Semibold font weight is 600 */
     font-size:1.25rem;
-    margin:-0.5rem 0 0.75rem 0;
 }
 
 /* Styling the filter buttons (Category and Type buttons) and search bar */
