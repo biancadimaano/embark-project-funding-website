@@ -1,0 +1,152 @@
+/* Info card for home page
+	 ========================================================================== */
+
+    main{
+        margin:1.5rem;
+    }
+
+
+    /* Setting the information card text to Open Sans*/
+    .info-card.home p{
+        font-family:'Open Sans', sans-serif;
+        padding:0 1.5rem;   
+    }
+
+    /* Styling the grant title */
+    .info-card.home h3{
+        font-weight:normal;
+        font-size:1.4rem;
+        margin-bottom:1.2rem;
+        padding:0 1.5rem;   
+    }
+
+    /* Styling the grant type */
+    .info-card.home .text.type{ 
+        font-weight:normal;
+        font-size:1rem;
+        color:#4D4D4D;
+        margin-bottom:0.5rem;
+    }
+
+    /* Styling the grant amount */
+    .info-card.home em{
+        font-weight:600; /* Semibold font weight is 600 */
+        font-size:1.65rem;
+        font-style:normal;
+        padding:0 1.5rem;   
+    }
+
+    /* Styling the application deadline */
+    .info-card.home .text.deadline{
+        font-weight:normal;
+        font-size:1.25rem;
+        font-style:normal;
+        margin-top:0.5rem;
+    }
+
+    /* Styling the information card div */
+    .info-card, .info-card.home{
+        border: 0.15rem solid #4D4D4D;
+        margin-top:2.5rem;
+        border-top-left-radius: 0.75rem;
+        border-top-right-radius: 0.75rem;
+        max-width:21.5rem;
+        z-index:1;
+    }
+    
+    /* Styling the "Learn More!" button */
+    .learn-more, .more-info{
+        background-color: #5050FF;
+        border-color:#5050FF;
+        text-align: center;
+        font-size: 1.35rem;
+        padding:1rem;
+        border-bottom-left-radius: 0.75rem;
+        border-bottom-right-radius: 0.75rem;
+        margin:-0.25rem 0 2rem 0;
+        width:21.5rem;
+        z-index: 2;
+        color:white;
+        text-decoration: none;
+        font-family:'Montserrat', sans-serif;
+        font-weight: bold;
+        display:inline-block;
+    }
+
+    .info-card.home, .more-info{
+        max-width:21.5rem;
+        width:21.5rem;
+    }
+
+    .info-card.home{
+        margin-bottom:0;
+    }
+    
+    /* Stying hover and focus states for info card buttons */
+    .learn-more:hover, .learn-more:focus, .more-info:hover, .more-info:focus{
+        background-color:#4D4D4D;
+        text-decoration:underline;
+        text-decoration-color:white; /* Resource: https://www.w3schools.com/cssref/css3_pr_text-decoration-color.php */
+    }
+
+/* Info card for grant info pages
+	 ========================================================================== */
+
+    /* Styling the grant amount */
+    .info-card em{
+        font-weight:600; /* Semibold font weight is 600 */
+        font-size:2rem;
+        font-style:normal;
+        padding:0 1.5rem; 
+        margin:1.25rem 0 0.5rem 0;
+    }
+    
+    /* Styling the category tags */
+    .info-card ul{
+        padding:0;
+        list-style:none;
+        padding:0 1.5rem;  
+        margin:0.25rem 0 1.5rem 0; 
+    }
+    
+    .info-card .button.filter.inline{
+        color:#4D4D4D;
+        text-align:center;
+        font-family:'Open Sans', sans-serif;
+        font-size:1rem;
+        font-weight:normal;
+        padding:0.35rem 1.25rem;
+        border-radius:0.35rem;
+        margin-top:0.45rem;
+        margin-right:0.25rem;
+    }
+    
+    .button.filter{
+        color:#4D4D4D;
+        font-weight:600; /* Semibold font weight is 600 */
+        border: 0.15rem solid;
+        text-align:left;
+        font-size:1rem;
+        padding:1rem;
+    }
+    
+    /* Styling the grant headings */
+    .info-card h2{
+        font-weight:normal;
+        font-weight:600; /* Semibold font weight is 600 */
+        font-size:1rem;
+        padding:0 1.5rem;   
+    }
+    
+    /* Styling the grant information */
+    .info-card p{
+        font-family:'Open Sans', sans-serif;
+        font-size:1.25rem;
+        margin-top:-0.5rem;
+        padding:0 1.5rem;   
+    }
+    
+    .info-card h2, .info-card p{
+        color:#4D4D4D;
+    }
+    
