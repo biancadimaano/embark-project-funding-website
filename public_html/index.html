@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/grid-home.css">
     <link rel="stylesheet" href="css/infocards.css">
+    <script type="text/javascript" src="js/script.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,20 +59,56 @@
         <p class="text light-gray">Sort by</p> <!-- Change to a button for JavaScript -->
         <div class="grid filter">
             <div class="grid filter buttons">
-                <select name="category" class="button filter" id="category-filter" aria-label="Filter funding opportunities by category">
-                    <option value="" disabled selected class="dropdown-hidden">Category</option> <!-- Resource for placeholder for <select> tag: https://stackoverflow.com/questions/5805059/how-do-i-make-a-placeholder-for-a-select-box -->
-                    <option value="clean-energy">Clean Energy</option>
-                    <option value="climate">Climate</option>
-                    <option value="community">Community</option>
-                    <option value="emergency/safety">Emergency/Safety</option>
-                    <option value="youth">Youth</option>
-                </select>
-                <select name="type" class="button filter" id="type-filter" aria-label="Filter funding opportunities by type">
-                    <option value="" disabled selected class="dropdown-hidden">Type</option> <!-- Resource for placeholder for <select> tag: https://stackoverflow.com/questions/5805059/how-do-i-make-a-placeholder-for-a-select-box -->
-                    <option value="grant">Grants</option>
-                    <option value="award">Awards</option>
-                    <option value="program">Programs</option>
-                </select>
+                <button class="button filter" id="category-filter" onclick="showDropdown('category-filter', 'category-dropdown')">Category</button>
+
+                <ul class="button filter" id="category-dropdown">
+                    <li>
+                        <input type="checkbox" id="clean-energy" value="clean-energy">
+                        <label for="clean-energy">Clean Energy</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" id="climate" value="climate">
+                        <label for="climate">Climate</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" id="community" value="community">
+                        <label for="community">Community</label>                   
+                    </li>
+                        
+                    <li>
+                        <input type="checkbox" id="emergency/safety" value="emergency/safety">
+                        <label for="emergency/safety">Emergency/Safety</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" id="youth" value="youth">
+                        <label for="youth">Youth</label>
+                    </li>
+
+                </ul>
+
+
+                <button class="button filter" id="type-filter" onclick="showDropdown('type-filter', 'type-dropdown')">Type</button>
+
+                <ul class="button filter" id="type-dropdown">
+                    <li>
+                        <input type="checkbox" id="clean-energy" value="clean-energy">
+                        <label for="clean-energy">Clean Energy</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" id="climate" value="climate">
+                        <label for="climate">Climate</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" id="community" value="community">
+                        <label for="community">Community</label>                   
+                    </li>
+                </ul>
+                
             </div>
 
             <!-- Text input to search -->
