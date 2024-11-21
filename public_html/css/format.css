@@ -1,9 +1,3 @@
-/* .homepage-header{
-    display:flex;
-    flex-direction:column;
-    justify-content: center;
-} */
-
 *{
     box-sizing:border-box;
 }
@@ -12,7 +6,6 @@
     display:grid;
     row-gap:0.5rem;
 }
-
 
 .grid.filter.buttons{
     grid-template-columns: 1fr 1fr;
@@ -71,12 +64,6 @@
         max-width:20rem;
     }
 
-    .info-card .button{
-        max-width:33%;
-        overflow:hidden;
-        text-wrap:nowrap;
-        text-overflow:ellipsis; /* Resource: https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow */
-    }
 }
 
 @media (width > 64.5625rem){
