@@ -97,7 +97,7 @@
     
     /* Stying hover and focus states for info card buttons */
     .learn-more:hover, .learn-more:focus, .more-info:hover, .more-info:focus{
-        background-color:#4D4D4D;
+        background-color:#B3B3B3;
         text-decoration:underline;
         text-decoration-color:white; /* Resource: https://www.w3schools.com/cssref/css3_pr_text-decoration-color.php */
     }

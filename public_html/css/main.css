@@ -40,12 +40,16 @@ header p{
     max-width:20rem;
 }
 
-.button.blue{
+.button.green{
     background-color:#14795F;
 }
 
-.button.gray{
+.button.light-green{
     background-color:#96C6B3;
+}
+
+.button.green:hover, .button.green:focus, .button.light-green:hover, .button.light-green:focus{
+    background-color:#B3B3B3;
 }
 
 .button{
@@ -113,7 +117,7 @@ main .text.light-gray{
     --> Resource for changing the outline colour when selecting a text input:
         https://stackoverflow.com/questions/43427993/change-the-color-of-a-input-field-when-selected */
 .button.filter.search:focus{
-    outline-color:#5050FF;
+    outline-color:#6F9E94;
 }
 
 /* Styling the "6 results" text */
