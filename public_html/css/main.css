@@ -143,6 +143,22 @@ main .text{
     top:4rem;
     width:13.6rem;
     border: 0.2rem solid #6F9E94;
+    padding: 0.5rem 0.75rem;
+}
+
+.button.filter li{
+    margin:0.65rem 0;
+}
+
+/* Resource: https://stackoverflow.com/questions/1431726/css-selector-for-a-checked-radio-buttons-label */
+input[type="checkbox"]:checked + label {
+    color: #6F9E94;
+}
+
+/* Resource: https://stackoverflow.com/questions/1431726/css-selector-for-a-checked-radio-buttons-label */
+
+input[type="radio"]:checked + label {
+    color: #6F9E94;
 }
 
 #type-dropdown{
