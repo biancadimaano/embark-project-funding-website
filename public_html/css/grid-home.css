@@ -7,7 +7,13 @@
     row-gap:0.5rem;
 }
 
-.grid.filter.buttons{
+details div{
+    display:grid;
+    row-gap:0.25rem;
+}
+
+.dropdowns{
+    display:grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 0.5rem;
 }
@@ -102,7 +108,7 @@
     }
 
     .grid.filter{
-        grid-template-columns: 1fr 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
         column-gap: 1rem !important;
     }
 

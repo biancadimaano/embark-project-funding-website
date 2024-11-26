@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/grid-home.css">
     <link rel="stylesheet" href="css/infocards.css">
-    <script type="text/javascript" src="js/script.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,50 +53,60 @@
 
      <!-- Funding opportunities section -->
      <main>
-        <!-- Maybe make this a div? -->
         <h2>Funding Opportunities</h2>
         <p class="text light-gray">Sort by</p> <!-- Change to a button for JavaScript -->
         <div class="grid filter">
+            <div class="dropdowns">
+                <!-- Dropdown menu to filter by categories -->
+                <!-- Using <details> to have a dropdown that can select multiple options -->
+                <details id="details-category" class="button filter category">
+                    <summary>Category</summary>
+                    <div class="details open category">
+                        <!-- BIPOC -->
+                        <input type="checkbox" id="bipoc" name="category" value="bipoc" onclick="filterByCategory()">
+                        <label for="bipoc">BIPOC</label>
 
-            <!-- Dropdown menu to filter by categories -->
-            <!-- Using <details> to have a dropdown that can select multiple options -->
-            <details>
-                <summary>Category</summary>
-                    <!-- BIPOC -->
-                    <input type="checkbox" id="bipoc" name="category" value="bipoc">
-                    <label for="bipoc">BIPOC</label>
-                    <!-- Clean Energy -->
-                    <input type="checkbox" id="clean-energy" name="category" value="clean-energy">
-                    <label for="clean-energy">Clean Energy</label>
-                    <!-- Climate -->
-                    <input type="checkbox" id="climate" name="category" value="climate">
-                    <label for="climate">Climate</label>
-                    <!-- Community -->
-                    <input type="checkbox" id="community" name="category" value="community">
-                    <label for="community">Community</label>                   
-                    <!-- Emergency/Safety -->
-                    <input type="checkbox" id="emergency/safety" name="category" value="emergency/safety">
-                    <label for="emergency/safety">Emergency/Safety</label>
-                    <!-- Youth -->
-                    <input type="checkbox" id="youth" name="category" value="youth">
-                    <label for="youth">Youth</label>
+                        <!-- Clean Energy -->
+                        <input type="checkbox" id="clean-energy" name="category" value="clean-energy" onclick="filterByCategory()">
+                        <label for="clean-energy">Clean Energy</label>
 
-            </details>
+                        <!-- Climate -->
+                        <input type="checkbox" id="climate" name="category" value="climate" onclick="filterByCategory()">
+                        <label for="climate">Climate</label>
+
+                        <!-- Community -->
+                        <input type="checkbox" id="community" name="category" value="community" onclick="filterByCategory()">
+                        <label for="community">Community</label>    
+
+                        <!-- Emergency/Safety -->
+                        <input type="checkbox" id="emergency/safety" name="category" value="emergency/safety" onclick="filterByCategory()">
+                        <label for="emergency/safety">Emergency/Safety</label>
+
+                        <!-- Youth -->
+                        <input type="checkbox" id="youth" name="category" value="youth" onclick="filterByCategory()">
+                        <label for="youth">Youth</label>
+                    </div>
+                </details>
+                <!-- END category filter dropdown -->
  
-            <!-- Buttons to filter by category and type -->
-            <!-- Using <details> to have a dropdown that can select multiple options -->
-            <details>
-                <summary>Type</summary>
-                <!-- Grants -->
-                <input type="radio" id="grant" name="type" value="grant">
-                <label for="grant">Grants</label>
-                <!-- Awards -->
-                <input type="radio" id="award" name="type" value="award">
-                <label for="award">Awards</label>
-                <!-- Programs -->
-                <input type="radio" id="program" name="type" value="program">
-                <label for="program">Programs</label>   
-            </details>
+                <!-- Buttons to filter by category and type -->
+                <!-- Using <details> to have a dropdown that can select multiple options -->
+                <details id="details-type" class="button filter type">
+                    <summary>Type</summary>
+                    <div class="details open type">
+                        <!-- Grants -->
+                        <input type="radio" id="grant" name="type" value="grant" onclick="filterByType('grant')">
+                        <label for="grant">Grants</label>
+                        <!-- Awards -->
+                        <input type="radio" id="award" name="type" value="award" onclick="filterByType('award')">
+                        <label for="award">Awards</label>
+                        <!-- Programs -->
+                        <input type="radio" id="program" name="type" value="program" onclick="filterByType('program')">
+                        <label for="program">Programs</label>   
+                    </div>
+                </details>
+                <!-- END type filter dropdown -->
+            </div>
 
             <!-- Text input to search -->
             <input type="text" placeholder="Search by title..." list="opportunities" class="button filter search">
@@ -255,6 +264,6 @@
 
      </main>
      <!-- END Funding opportunities section -->
-
+     <script type="text/javascript" src="js/filter.js"></script>
 </body>
 </html>

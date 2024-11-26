@@ -9,6 +9,12 @@
     https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details
 */
 
+// let all_categories = document.querySelectorAll('.type input')
+// for (let category of all_categories) {
+//   category.addEventListener('click', name_of_function);
+// }
+
+
 var details = document.querySelector("details");
 
 details.addEventListener("toggle", (event) => {
@@ -21,9 +27,15 @@ details.addEventListener("toggle", (event) => {
     }
   });
 
+/*
+  Filtering by Category
+    ========================================================
+*/
+
+let categoriesChecked = []; // Array for tracking the categories the user checks (for filtering by category)
+
 function filterByCategory(){
     let categories = document.getElementsByName("category");
-    let categoriesChecked = []; // Array for tracking the categories the user checks (for filtering by category)
 
     for(var i = 0; i < categories.length; i++){
       // Checkbox checked resource: https://www.w3schools.com/howto/howto_js_display_checkbox_text.asp
@@ -38,6 +50,11 @@ function filterByCategory(){
     
     console.log(categoriesChecked);
 }
+
+/*
+  Filtering by Type
+    ========================================================
+*/
 
 /*
   https://www.w3schools.com/jsref/prop_radio_checked.asp

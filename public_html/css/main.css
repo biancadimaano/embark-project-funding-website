@@ -131,14 +131,13 @@ main .text{
 }
 
 /* Have to make this div position:relative so that category-dropdown position:absolute works correctly */
-.grid.filter.buttons{
+.dropdowns{
     position:relative;
 }
 
 /* Styling category and type dropdown menus */
-#category-dropdown, #type-dropdown{
+details input{
     display:none;
-    list-style:none;
     position:absolute;
     top:4rem;
     width:13.6rem;
@@ -146,8 +145,22 @@ main .text{
     padding: 0.5rem 0.75rem;
 }
 
-.button.filter li{
-    margin:0.65rem 0;
+.details.open{
+    margin-top:1.5rem;
+    position:absolute;
+    background-color:white;
+    border: 0.15rem solid;
+    padding:1rem;
+    border-radius:0.85rem;
+    width:49.5%;
+}
+
+.details.open.category{
+    left:0;
+}
+
+.details.open.type{
+    right:0;
 }
 
 /* Resource: https://stackoverflow.com/questions/1431726/css-selector-for-a-checked-radio-buttons-label */
@@ -161,23 +174,18 @@ input[type="radio"]:checked + label {
     color: #6F9E94;
 }
 
-#type-dropdown{
-    right:0;
-}
-
-/* Hiding the checkboxes
-    Resource: https://www.w3schools.com/howto/howto_css_custom_checkbox.asp */
-#category-dropdown input, #type-dropdown input{
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-}
-
 /* Styling the "6 results" text */
 .text.gray{
     font-family:'Montserrat', sans-serif;
     font-weight:bold;
     font-size:1.4rem;
     margin:2.5rem 0 -1rem 0;
+}
+
+/* How to filter elements
+    https://www.w3schools.com/howto/howto_js_filter_elements.asp */
+
+/* This class is added to the filtered info cards */
+.show{
+    display: block;
 }
