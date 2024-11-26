@@ -58,62 +58,46 @@
         <h2>Funding Opportunities</h2>
         <p class="text light-gray">Sort by</p> <!-- Change to a button for JavaScript -->
         <div class="grid filter">
-            <!-- Buttons to filter by category and type -->
-            <div class="grid filter buttons">
-                <!-- Button to open the category dropdown menu -->
-                <button class="button filter" id="category-filter" onclick="showDropdown('category-filter', 'category-dropdown')">Category</button>
-                <!-- Dropdown menu to filter by categories -->
-                <ul class="button filter" id="category-dropdown">
+
+            <!-- Dropdown menu to filter by categories -->
+            <!-- Using <details> to have a dropdown that can select multiple options -->
+            <details>
+                <summary>Category</summary>
+                    <!-- BIPOC -->
+                    <input type="checkbox" id="bipoc" name="category" value="bipoc">
+                    <label for="bipoc">BIPOC</label>
                     <!-- Clean Energy -->
-                    <li>
-                        <input type="checkbox" id="clean-energy" name="category" value="clean-energy">
-                        <label for="clean-energy">Clean Energy</label>
-                    </li>
+                    <input type="checkbox" id="clean-energy" name="category" value="clean-energy">
+                    <label for="clean-energy">Clean Energy</label>
                     <!-- Climate -->
-                    <li>
-                        <input type="checkbox" id="climate" name="category" value="climate">
-                        <label for="climate">Climate</label>
-                    </li>
+                    <input type="checkbox" id="climate" name="category" value="climate">
+                    <label for="climate">Climate</label>
                     <!-- Community -->
-                    <li>
-                        <input type="checkbox" id="community" name="category" value="community">
-                        <label for="community">Community</label>                   
-                    </li>
+                    <input type="checkbox" id="community" name="category" value="community">
+                    <label for="community">Community</label>                   
                     <!-- Emergency/Safety -->
-                    <li>
-                        <input type="checkbox" id="emergency/safety" name="category" value="emergency/safety">
-                        <label for="emergency/safety">Emergency/Safety</label>
-                    </li>
+                    <input type="checkbox" id="emergency/safety" name="category" value="emergency/safety">
+                    <label for="emergency/safety">Emergency/Safety</label>
                     <!-- Youth -->
-                    <li>
-                        <input type="checkbox" id="youth" name="category" value="youth">
-                        <label for="youth">Youth</label>
-                    </li>
+                    <input type="checkbox" id="youth" name="category" value="youth">
+                    <label for="youth">Youth</label>
 
-                </ul>
-
-                <!-- Button to open the type dropdown menu -->
-                <button class="button filter" id="type-filter" onclick="showDropdown('type-filter', 'type-dropdown')">Type</button>
-                <!-- Dropdown menu to filter by type -->
-                <ul class="button filter" id="type-dropdown">
-                    <!-- Grants -->
-                    <li>
-                        <input type="radio" id="grant" name="type" value="grant">
-                        <label for="grant">Grants</label>
-                    </li>
-                    <!-- Awards -->
-                    <li>
-                        <input type="radio" id="award" name="type" value="award">
-                        <label for="award">Awards</label>
-                    </li>
-                    <!-- Programs -->
-                    <li>
-                        <input type="radio" id="program" name="type" value="program">
-                        <label for="program">Programs</label>                 
-                    </li>
-                </ul>
-                
-            </div>
+            </details>
+ 
+            <!-- Buttons to filter by category and type -->
+            <!-- Using <details> to have a dropdown that can select multiple options -->
+            <details>
+                <summary>Type</summary>
+                <!-- Grants -->
+                <input type="radio" id="grant" name="type" value="grant">
+                <label for="grant">Grants</label>
+                <!-- Awards -->
+                <input type="radio" id="award" name="type" value="award">
+                <label for="award">Awards</label>
+                <!-- Programs -->
+                <input type="radio" id="program" name="type" value="program">
+                <label for="program">Programs</label>   
+            </details>
 
             <!-- Text input to search -->
             <input type="text" placeholder="Search by title..." list="opportunities" class="button filter search">
