@@ -155,7 +155,7 @@ details input{
     border: 0.15rem solid;
     padding:1rem;
     border-radius:0.85rem;
-    max-width:49.5%;
+    width:49.5%;
 }
 
 .details.open.category{
