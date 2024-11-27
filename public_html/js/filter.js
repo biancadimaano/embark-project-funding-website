@@ -10,7 +10,7 @@
 */
 
 // let all_categories = document.querySelectorAll('.type input')
-// for (let category of all_categories) {
+// for (let category of all_categories) {it
 //   category.addEventListener('click', name_of_function);
 // }
 
