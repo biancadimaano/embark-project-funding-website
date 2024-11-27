@@ -127,11 +127,21 @@ main .text{
 
 /* Changing the outline colour when selecting the "Search by title..." button
     --> Resource for changing the outline colour when selecting a text input:
-        https://stackoverflow.com/questions/43427993/change-the-color-of-a-input-field-when-selected */
-.button.filter:focus, .button.filter:active{
+        https://stackoverflow.com/questions/43427993/change-the-color-of-a-input-field-when-selected 
+    Also changing the border colour of buttons when they are clicked, including <button> and <details> elements
+    --> Resource for targetting open buttons with [open], such as an open details button:
+        https://stackoverflow.com/questions/61292792/css-selector-for-details-element-when-opened
+*/
+.button.filter:focus, .button.filter:active, .button.filter[open]{
     outline-color:#6F9E94;
     border: 0.2rem solid #6F9E94;
 }
+
+details summary:focus{
+    outline-color:#6F9E94;
+    color:#6F9E94;
+}
+
 
 /* Have to make this div position:relative so that category-dropdown position:absolute works correctly */
 .dropdowns{
@@ -144,7 +154,6 @@ details input{
     position:absolute;
     top:4rem;
     width:13.6rem;
-    border: 0.2rem solid #6F9E94;
     padding: 0.5rem 0.75rem;
 }
 
@@ -156,6 +165,7 @@ details input{
     padding:1rem;
     border-radius:0.85rem;
     width:49.5%;
+    border: 0.2rem solid #6F9E94;
 }
 
 .details.open.category{
