@@ -155,7 +155,7 @@ details input{
     border: 0.15rem solid;
     padding:1rem;
     border-radius:0.85rem;
-    width:49.5%;
+    max-width:49.5%;
 }
 
 .details.open.category{
@@ -164,6 +164,11 @@ details input{
 
 .details.open.type{
     right:0;
+}
+
+/* Turn the cursor into a finger pointer when hovering the dropdown filter options */
+label{
+    cursor: pointer;
 }
 
 /* Resource: https://stackoverflow.com/questions/1431726/css-selector-for-a-checked-radio-buttons-label */
