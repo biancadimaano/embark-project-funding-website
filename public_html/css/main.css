@@ -30,6 +30,10 @@ h1, main h2{
     font-size:2.5rem;
 }
 
+main h2{
+    margin-bottom:0.5rem;
+}
+
 h1{
     max-width:24.375rem;
 }
@@ -98,12 +102,11 @@ main{
 /* Styling the "Sort by" text */
 main .text.light-gray{
     color:#B3B3B3;
-    margin:-0.5rem 0 0.75rem 0;
 }
 
 main .text.green{
     color:#6F9E94;
-    margin:0.85rem 0 0.75rem 0;
+    text-align:right;
 }
 
 main .text{
