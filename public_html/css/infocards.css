@@ -10,10 +10,6 @@
 /* Info card for home page
 	 ========================================================================== */
 
-    main{
-        margin:1.5rem;
-    }
-
     /* Setting the information card text to Open Sans*/
     .info-card.home p{
         font-family:'Open Sans', sans-serif;
