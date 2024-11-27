@@ -7,6 +7,11 @@
     row-gap:0.5rem;
 }
 
+.text-above-filters{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 details div{
     display:grid;
     row-gap:0.25rem;
@@ -100,7 +105,7 @@ details div{
     }
 
     main{
-        margin:5rem;
+        margin:3.5rem 4.5rem;
     }
 
     .quiz-prompt h2{
