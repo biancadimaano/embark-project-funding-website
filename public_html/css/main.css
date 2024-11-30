@@ -96,7 +96,8 @@ header p{
 	 ========================================================================== */
 
 main{
-    margin:1.5rem;
+    background-color:#ECEDED;
+    padding:1.5rem;
 }
 
 /* Styling the "Sort by" text */
@@ -117,8 +118,8 @@ main .text{
 /* Styling the filter buttons (Category and Type buttons) and search bar */
 .button.filter{
     color:#4D4D4D;
+    border:none;
     font-weight:600; /* Semibold font weight is 600 */
-    border: 0.15rem solid;
     background:white;
     text-align:left;
     font-size:1rem;
@@ -190,6 +191,20 @@ input[type="checkbox"]:checked + label {
 
 input[type="radio"]:checked + label {
     color: #6F9E94;
+}
+
+/* Styling the autocomplete options
+    Resource: https://css-tricks.com/snippets/css/change-autocomplete-styles-webkit-browsers/*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+    border: 0.2rem solid #6F9E94;
+    
+}
+
+
+.results{
+    margin-top:2.5rem;
 }
 
 /* Styling the "6 results" text */

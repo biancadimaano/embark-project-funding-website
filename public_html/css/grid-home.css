@@ -60,19 +60,12 @@ details div{
     
 }
 
-@media (width > 49.875rem){
+@media (width > 52rem){
     .grid.results{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 25rem 25rem;
+        grid-template-rows: 1fr 1fr 1fr;
         column-gap:0.75rem;
-    }
-
-    /* INCLUDE RESOURCE ****************************************** */
-    .info-card:not(.more-info){
-        height:16.25rem;
-    } 
-
-    .info-card h3{
-        max-width:20rem;
+        row-gap:1rem;
     }
 
 }
@@ -105,7 +98,7 @@ details div{
     }
 
     main{
-        margin:3.5rem 4.5rem;
+        padding:3.5rem 4.5rem;
     }
 
     .quiz-prompt h2{
@@ -117,6 +110,11 @@ details div{
         column-gap: 1rem !important;
     }
 
+}
 
+@media (width > 85.625rem){
+    .grid.results{
+        grid-template-columns: 25rem 25rem 25rem;
+    }
 
 }
