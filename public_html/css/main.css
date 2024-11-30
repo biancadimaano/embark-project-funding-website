@@ -14,13 +14,6 @@
 /* Header
 	 ========================================================================== */
 
-/* Navigation bar */
-.nav-bar{
-    margin:0;
-    background-color:#6F9E94;
-    padding:1rem;
-}
-
 header section{
     margin:6rem 1.5rem;
 }
@@ -135,7 +128,7 @@ main .text{
 */
 .button.filter:focus, .button.filter:active, .button.filter[open]{
     outline-color:#6F9E94;
-    border: 0.2rem solid #6F9E94;
+    border: 0.15rem solid #6F9E94;
 }
 
 details summary:focus{
@@ -162,11 +155,10 @@ details input{
     margin-top:1.5rem;
     position:absolute;
     background-color:white;
-    border: 0.15rem solid;
     padding:1rem;
+    width:49%;
+    border: 0.15rem solid #6F9E94;
     border-radius:0.85rem;
-    width:49.5%;
-    border: 0.2rem solid #6F9E94;
 }
 
 .details.open.category{
@@ -198,10 +190,9 @@ input[type="radio"]:checked + label {
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus {
-    border: 0.2rem solid #6F9E94;
+    border: 0.15rem solid #6F9E94;
     
 }
-
 
 .results{
     margin-top:2.5rem;

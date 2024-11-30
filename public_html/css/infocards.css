@@ -28,7 +28,7 @@
     }
 
     /* Styling the information card div */
-    .info-card, .info-card.home{
+    .info-card.home{
         display:grid;
         row-gap:0.5rem;
 
