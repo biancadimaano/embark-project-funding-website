@@ -123,8 +123,20 @@ function update_displayed_info_cards(){
     Update the text thats says the number of results ('_ Results')
   */
   document.getElementById("results").innerHTML = displayed_info_cards + ' Results';
-}
 
+  /* 
+    Displaying a paragraph element that says "No results found with the selected filters" when there are 0 results
+    Also checking if selected_categories is not empty, meaning that the filters were used. 
+      -> Don't want this text to show when there are 0 opportunities in the first place, only when there are 0 from the chosen filters.
+  */
+  if(displayed_info_cards == 0 && selected_categories.length > 0){
+    document.getElementById('no-results').style.display = 'block';
+  }
+  else{
+    document.getElementById('no-results').style.display = 'none';
+  }
+  
+}
 
 function update_filtered_info_cards() {
   let filtered_by_category = filter_by_category(selected_categories);

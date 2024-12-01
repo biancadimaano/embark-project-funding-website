@@ -239,6 +239,13 @@ input:-webkit-autofill:focus {
     margin:2.5rem 0 -1rem 0;
 }
 
+/* Styling the text that says "No results found with the selected filters" */
+#no-results{
+    /* Start as a hidden element, only shows when there are 0 results found from the filters*/
+    display:none;
+    color:#6F9E94;
+}
+
 /* How to filter elements
     https://www.w3schools.com/howto/howto_js_filter_elements.asp */
 
