@@ -4,69 +4,189 @@
 // }
 
 /* 
+  Event listener to detect if the <details> element is open or closed.
+  Checks whenever a <details> element is clicked.
+
   Resources for <details> event listener:
     https://stackoverflow.com/questions/7363117/detecting-the-opening-or-closing-of-a-details-element
     https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details
 */
 
-// let all_categories = document.querySelectorAll('.type input')
-// for (let category of all_categories) {it
-//   category.addEventListener('click', name_of_function);
-// }
-
-
 var details = document.querySelector("details");
 
 details.addEventListener("toggle", (event) => {
     if (details.open) {
-      /* the element was toggled open */
+      /* The element was toggled open */
       console.log("open");
     } else {
-      /* the element was toggled closed */
+      /* The element was toggled closed */
       console.log("close");
     }
   });
 
 /*
-  Filtering by Category
-    ========================================================
-*/
-
-let categoriesChecked = []; // Array for tracking the categories the user checks (for filtering by category)
-
-function filterByCategory(){
-    let categories = document.getElementsByName("category");
-
-    for(var i = 0; i < categories.length; i++){
-      // Checkbox checked resource: https://www.w3schools.com/howto/howto_js_display_checkbox_text.asp
-      if(categories[i].checked){
-        // includes resource: https://www.w3schools.com/jsref/jsref_includes_array.asp
-        if(!(categoriesChecked.includes(categories[i].value))){
-          categoriesChecked.push(categories[i].value);
-
-        }
-      }
-    }
-    
-    console.log(categoriesChecked);
-}
-
-/*
-  Filtering by Type
+  Filtering by category and type using the dropdown menus
     ========================================================
 */
 
 /*
-  https://www.w3schools.com/jsref/prop_radio_checked.asp
+  Selecting all of the homepage info card elements (elements with .info-card.home as a class) using querySelectorAll
+  Using Array.from() to store these values in an Array
+
+  Resources:
+    https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
+    https://www.w3schools.com/jsref/met_document_queryselectorall.asp
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from
 */
-function filterByType(fundingType){
-    let type = document.getElementById(fundingType);
-    let typeChecked;
+let all_info_cards = Array.from(document.querySelectorAll('.info-card.home'));
+// console.log("all info cards: ", all_info_cards);
 
-    if(type.checked){
-      typeChecked = type.value;
-    }
+// Variable that stores the categories that were checked by the user in the dropdown menu, default value: empty array
+let selected_categories = [];
+// Variable that stores the type that was checked by the user in the dropdown menu, default value: null
+let selected_type = null;
+// Variable that stores the number of info cards that are currently displayed on the screen, default value: 6
+let displayed_info_cards = 6;
 
-    console.log(typeChecked);
+/*
+  Removes a category from selected_categories when it is unchecked.
+*/
+function uncheck_category(category_id) {
+  /* 
+    Using filter() to remove the unchecked categories from the array
+    Resource:
+      https://www.w3schools.com/jsref/jsref_filter.asp
+
+    This checks if id is not equal to categoryId, filter will exclude these items from the selected_categories array.
+  */
+  selected_categories = selected_categories.filter(id => id != category_id);
 }
 
+/*
+  Unchecks any selected checkboxes when a new checkbox is selected.
+  Used for the "Type" dropdown, only 1 type can be selected at a time.
+  Resource for .checked:
+    https://www.w3schools.com/jsreF/prop_checkbox_checked.asp
+*/
+function allow_only_one_checkbox(checkedId) {
+  // Select only the checkboxes for the Type dropdown
+  const checkboxes = document.querySelectorAll('#details-type input[type="checkbox"]');
+  
+  checkboxes.forEach(checkbox => {
+    if (checkbox.id !== checkedId) {
+      checkbox.checked = false; // Uncheck all checkboxes except the selected one
+    }
+  });
+}
+
+/*
+  Returns all of the info cards that have ALL selected categories
+  Use .filter, .contains and .every to check
+  Resources:
+    https://www.w3schools.com/jsref/jsref_filter.asp
+    https://www.w3schools.com/java/ref_string_contains.asp
+    https://www.w3schools.com/jsref/jsref_every.asp
+*/
+function filter_by_category(selected_categories){
+  /*
+    Checks if each card has *every* class from the selected_categories array.
+    Only cards that have all the selected categories will be returned using filter().
+  */
+  return all_info_cards.filter(card => {
+    return selected_categories.every(category => card.classList.contains(category));
+  });
+}
+
+/*
+  Returns all of the info cards of the selected type
+  Use .filter and .contains to check
+  Resource:
+    https://www.w3schools.com/jsref/jsref_filter.asp  
+    https://www.w3schools.com/java/ref_string_contains.asp
+*/
+function filter_by_type(type) {
+  /*
+    Checks the cards that have the corresponding type.
+    Only cards that have all the selected type will be returned using filter().
+  */
+  return all_info_cards.filter(card => {
+    return card.classList.contains(type);
+  });
+}
+
+
+function update_displayed_info_cards(){
+  const visible_cards = document.querySelectorAll('.info-card.home.show');
+  displayed_info_cards = visible_cards.length;
+  console.log("Displaying: " + displayed_info_cards);
+  /*
+    Update the text thats says the number of results ('_ Results')
+  */
+  document.getElementById("results").innerHTML = displayed_info_cards + ' Results';
+}
+
+
+function update_filtered_info_cards() {
+  let filtered_by_category = filter_by_category(selected_categories);
+  let filtered_by_type = selected_type ? filter_by_type(selected_type) : filtered_by_category;
+  let filtered_info_cards = selected_categories.length > 0 
+    ? filtered_by_category.filter(card => filtered_by_type.includes(card)) 
+    : filtered_by_type;
+
+  all_info_cards.forEach(card => {
+    card.style.display = 'none';
+    card.classList.remove('show');
+  });
+
+  if (selected_categories.length == 0 && !selected_type) {
+    all_info_cards.forEach(card => {
+      card.style.display = 'grid';
+      card.classList.add('show');
+    });
+  } else {
+    filtered_info_cards.forEach(card => {
+      card.style.display = 'grid';
+      card.classList.add('show');
+    });
+  }
+
+  filtered_info_cards.forEach(card => {
+    console.log(card.className);
+  });
+
+  update_displayed_info_cards();
+}
+
+document.querySelectorAll('#details-category input[type="checkbox"]').forEach(checkbox => {
+  checkbox.addEventListener('change', function () {
+    if (this.checked) {
+      selected_categories.push(this.id);
+    } else {
+      uncheck_category(this.id);
+    }
+    console.log("Checked categories:", selected_categories);
+    update_filtered_info_cards();
+  });
+});
+
+document.querySelectorAll('#details-type input[type="radio"]').forEach(radio => {
+  radio.addEventListener('change', function () {
+    selected_type = this.value;
+    console.log("Selected type:", selected_type);
+    update_filtered_info_cards();
+  });
+});
+
+document.querySelectorAll('#details-type input[type="checkbox"]').forEach(checkbox => {
+  checkbox.addEventListener('change', function () {
+    if (this.checked) {
+      selected_type = this.value;
+      console.log("Selected type:", selected_type);
+    } else {
+      selected_type = null;
+    }
+
+    allow_only_one_checkbox(this.id);
+    update_filtered_info_cards();
+  });
+});
