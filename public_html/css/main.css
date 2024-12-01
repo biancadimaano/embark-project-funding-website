@@ -142,6 +142,11 @@ details summary:focus{
     position:relative;
 }
 
+.dropdowns, input{
+    user-select: none; /* User cannot highlight the details text, Resource: https://www.w3schools.com/howto/howto_css_disable_text_selection.asp*/
+    cursor:pointer;
+}
+
 /* Styling category and type dropdown menus */
 details input{
     display:none;
@@ -196,6 +201,7 @@ input:-webkit-autofill:focus {
 
 .results{
     margin-top:2.5rem;
+    min-height:40rem;
 }
 
 /* Styling the "6 results" text */

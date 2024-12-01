@@ -68,29 +68,29 @@
                     <summary>Category</summary>
                     <div class="details open category">
                         <!-- BIPOC -->
-                        <input type="checkbox" id="bipoc" name="category" value="bipoc" onclick="filterByCategory()">
+                        <input type="checkbox" id="bipoc" name="category" value="bipoc"">
                         <label for="bipoc">BIPOC</label>
 
                         <!-- Clean Energy -->
-                        <input type="checkbox" id="clean-energy" name="category" value="clean-energy" onclick="filterByCategory()">
+                        <input type="checkbox" id="clean-energy" name="category" value="clean-energy">
                         <label for="clean-energy">Clean Energy</label>
 
                         <!-- Climate -->
-                        <input type="checkbox" id="climate" name="category" value="climate" onclick="filterByCategory()">
+                        <input type="checkbox" id="climate" name="category" value="climate">
                         <label for="climate">Climate</label>
 
                         <!-- Community -->
-                        <input type="checkbox" id="community" name="category" value="community" onclick="filterByCategory()">
+                        <input type="checkbox" id="community" name="category" value="community">
                         <label for="community">Community</label>    
 
                         <!-- Emergency/Safety -->
-                        <input type="checkbox" id="emergency/safety" name="category" value="emergency/safety" onclick="filterByCategory()">
+                        <input type="checkbox" id="emergency-safety" name="category" value="emergency-safety">
                         <!-- Added <wbr> to break the text on the slash -->
                         <!-- Resource: https://stackoverflow.com/questions/8186743/what-is-the-best-way-to-break-html-text-on-slashes -->
-                        <label for="emergency/safety">Emergency/<wbr>Safety</label>
+                        <label for="emergency-safety">Emergency/<wbr>Safety</label>
 
                         <!-- Youth -->
-                        <input type="checkbox" id="youth" name="category" value="youth" onclick="filterByCategory()">
+                        <input type="checkbox" id="youth" name="category" value="youth">
                         <label for="youth">Youth</label>
                     </div>
                 </details>
@@ -102,13 +102,13 @@
                     <summary>Type</summary>
                     <div class="details open type">
                         <!-- Grants -->
-                        <input type="radio" id="grant" name="type" value="grant" onclick="filterByType('grant')">
+                        <input type="checkbox" id="grant" name="type" value="grant">
                         <label for="grant">Grants</label>
                         <!-- Awards -->
-                        <input type="radio" id="award" name="type" value="award" onclick="filterByType('award')">
+                        <input type="checkbox" id="award" name="type" value="award">
                         <label for="award">Awards</label>
                         <!-- Programs -->
-                        <input type="radio" id="program" name="type" value="program" onclick="filterByType('program')">
+                        <input type="checkbox" id="program" name="type" value="program">
                         <label for="program">Programs</label>   
                     </div>
                 </details>
@@ -131,11 +131,11 @@
         </div>
 
         <!-- Section of grant/award/program results -->
-        <p class="text gray">6 Results</p>
+        <p id="results" class="text gray">6 Results</p>
         <div class="grid results">
 
             <!-- EcoAction Community Funding Program Information Card-->
-            <div class="info-card home">
+            <div class="info-card home climate community grant">
                 <!-- Category tags -->
                 <ul>
                     <li>CLIMATE</li>
@@ -154,7 +154,7 @@
             </div>
  
             <!-- BC Hydro Broad Impact Grants -->
-            <div class="info-card home">
+            <div class="info-card home clean-energy youth emergency-safety grant">
                 <!-- Category tags -->
                 <ul>
                     <li>CLEAN ENERGY</li>
@@ -174,7 +174,7 @@
             </div>
             
             <!-- Assembly Grant -->
-            <div class="info-card home">
+            <div class="info-card home climate youth grant">
                 <!-- Category tags -->
                 <ul>
                     <li>CLIMATE</li>
@@ -193,7 +193,7 @@
             </div>
 
             <!-- Ocean Action Grant -->
-            <div class="info-card home">
+            <div class="info-card home climate youth community grant">
                 <!-- Category tags -->
                 <ul>
                     <li>CLIMATE</li>
@@ -213,7 +213,7 @@
             </div>
 
             <!-- National Youth Climate Activism Award -->
-            <div class="info-card home">
+            <div class="info-card home youth climate award">
                 <!-- Category tags -->
                 <ul>
                     <li>YOUTH</li>
@@ -232,7 +232,7 @@
             </div>
 
             <!-- Abundance Fellowship -->
-            <div class="info-card home">
+            <div class="info-card home climate youth program">
                 <!-- Category tags -->
                 <ul>
                     <li>CLIMATE</li>
@@ -257,6 +257,6 @@
 
      </main>
      <!-- END Funding opportunities section -->
-     <script type="text/javascript" src="js/filter.js"></script>
+     <script src="../js/filter.js"></script>
 </body>
 </html>
