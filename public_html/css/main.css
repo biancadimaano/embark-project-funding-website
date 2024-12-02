@@ -167,6 +167,22 @@ main .text{
     width:100%;
 }
 
+::-webkit-input-placeholder {
+    color:#4D4D4D;
+}
+
+::-moz-placeholder {
+    color:#4D4D4D;
+}
+
+::-ms-placeholder {
+    color:#4D4D4D;
+}
+
+::placeholder {
+    color:#4D4D4D;
+}
+
 /* Changing the outline colour when selecting the "Search by title..." button
     --> Resource for changing the outline colour when selecting a text input:
         https://stackoverflow.com/questions/43427993/change-the-color-of-a-input-field-when-selected 
