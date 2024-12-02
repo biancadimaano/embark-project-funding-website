@@ -117,12 +117,49 @@ function filter_by_type(type) {
 
 function update_displayed_info_cards(){
   const visible_cards = document.querySelectorAll('.info-card.home.show');
+  const summary_text_category = document.querySelector('.button.filter.category summary');
+  const summary_text_type = document.querySelector('.button.filter.type summary');
+
   displayed_info_cards = visible_cards.length;
   console.log("Displaying: " + displayed_info_cards);
   /*
     Update the text thats says the number of results ('_ Results')
   */
   document.getElementById("results").innerHTML = displayed_info_cards + ' Results';
+
+  /*
+    Changing the "Category" text in the dropdown to "__ Selected"
+  */
+  if(selected_categories.length == 0){
+    summary_text_category.innerHTML = 'Category';
+    summary_text_category.style.color = "#4D4D4D";
+  }
+  // Using else if for readability
+  else if(selected_categories.length > 0){
+    summary_text_category.innerHTML = selected_categories.length + ' Selected';
+    summary_text_category.style.color = "#6F9E94";
+  }
+
+  if(selected_type == null){
+    summary_text_type.innerHTML = 'Type';
+    summary_text_type.style.color = "#4D4D4D";
+  }
+  // Using else if for readability
+  else if(selected_type != null){
+    // Switch case to write the correct funding type in the summary text content
+    switch(selected_type){
+      case 'grant':
+        summary_text_type.innerHTML = "Grants";
+        break;
+      case 'award':
+        summary_text_type.innerHTML = "Awards";
+        break;
+      case 'program':
+        summary_text_type.innerHTML = "Programs";
+        break;
+    }
+    summary_text_type.style.color = "#6F9E94";
+  }
 
   /* 
     Displaying a paragraph element that says "No results found with the selected filters" when there are 0 results
