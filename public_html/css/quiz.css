@@ -56,7 +56,7 @@ h1{
     font-size: 2rem;
 }
 
-legend{
+legend h1{
     font-size:1.35rem;
     font-weight:bold;
     margin:0;
