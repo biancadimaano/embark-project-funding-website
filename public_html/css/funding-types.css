@@ -19,10 +19,9 @@ a {
 }
 
 a:hover, a:focus {
-    transition-duration: 0.3s;
-    transition: 0.3s;
     text-decoration: underline;
     color: #6F9E94;
+    transition: 0.3s ease;
 }
 
 
@@ -48,7 +47,7 @@ a:hover, a:focus {
     color: white;
     font-family: 'Montserrat', Helvetica, sans-serif;
     display: flex;
-    border-radius: 0.5rem;
+    border-radius: 0.85rem;
     padding: 1.3rem;
     width: auto;
     max-width: 22rem;
@@ -58,15 +57,13 @@ a:hover, a:focus {
     font-size: 0.9rem;
     font-weight: 600;
     text-decoration: none;
-    /* filter: drop-shadow( 3px 3px 3px gray); */
 }
 
-
-.button:hover, :focus {
+.button:hover, .button:focus {
     text-decoration: none;
     transition-property: background-color;
-    transition-duration: 0.3s;
-    background-color: #6F9E94;
+    transition: 0.3s ease;
+    background-color: #B3B3B3;
     color: white;
 }
 
