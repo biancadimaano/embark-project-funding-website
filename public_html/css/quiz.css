@@ -85,6 +85,8 @@ legend ~ p{
 }
 
 fieldset{
+    /* Removing the border on the fieldset
+        Resource: https://stackoverflow.com/questions/4230375/whats-the-easiest-way-to-remove-fieldset-border-lines */
     border:none;
     padding:0;
     margin-top:1.25rem;
