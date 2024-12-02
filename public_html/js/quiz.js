@@ -22,10 +22,15 @@ let selected_types = [];
 
 function filter_by_grant_amount(selected_grant_amounts) {
     return all_info_cards.filter(card => {
+        const cardAmount = parseInt(card.getAttribute('data-grant-amount'), 10);
+
+        // If no grant amounts are selected, show all cards
+        if (selected_grant_amounts.length === 0) {
+            return true;
+        }
+
+        // Check if the card amount falls into any of the selected ranges
         return selected_grant_amounts.some(amount => {
-            // Assuming the grant amount is stored in the card's data attribute `data-grant-amount`
-            const cardAmount = parseInt(card.getAttribute('data-grant-amount'), 10);
-            
             switch (amount) {
                 case '0-500':
                     return cardAmount <= 500;
@@ -91,18 +96,22 @@ function update_displayed_info_cards(){
 }
   
 function update_filtered_info_cards() {
+    let filtered_by_grant_amount = filter_by_grant_amount(selected_grant_amounts);
     let filtered_by_category = filter_by_category(selected_categories);
-    let filtered_info_cards = filter_by_type(selected_types);
+    let filtered_by_type = filter_by_type(selected_types);
 
-    // Combine both filters
-    filtered_info_cards = filtered_by_category.filter(card => 
-        filtered_info_cards.includes(card)
-    );
+    // Combine all filters, ensuring that only the cards matching any of the selected criteria are shown
+    let filtered_info_cards = filtered_by_grant_amount.concat(filtered_by_category, filtered_by_type);
 
+    // Remove duplicates by using a Set (since some cards may match multiple filters)
+    filtered_info_cards = [...new Set(filtered_info_cards)];
+
+    // Hide all cards
     all_info_cards.forEach(card => {
         card.style.display = 'none';
     });
 
+    // Display only the filtered cards
     filtered_info_cards.forEach(card => {
         card.style.display = 'grid';
     });
@@ -135,6 +144,18 @@ document.querySelectorAll('#question-types input[type="checkbox"]').forEach(chec
     });
 });
   
+document.querySelectorAll('#question-grant-amounts input[type="checkbox"]').forEach(checkbox => {
+    checkbox.addEventListener('change', function () {
+        if (this.checked) {
+            selected_grant_amounts.push(this.id);  // Add the selected range to the array
+        } else {
+            selected_grant_amounts = selected_grant_amounts.filter(amount => amount !== this.id);  // Remove it if unchecked
+        }
+        console.log("Checked grant amounts:", selected_grant_amounts);
+        update_filtered_info_cards();
+    });
+});
+
 // Utility function to get URL parameters
 function getQueryParams() {
     const params = {};
