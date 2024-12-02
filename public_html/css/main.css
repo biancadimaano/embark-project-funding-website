@@ -50,7 +50,7 @@ h1, main h2{
 }
 
 main h2{
-    margin-bottom:0.5rem;
+    margin-bottom:1.5rem;
 }
 
 h1{
@@ -125,6 +125,21 @@ main{
 /* Styling the "Sort by" text */
 main .text.light-gray{
     color:#B3B3B3;
+    margin:0;
+}
+
+/* Styling the "Clear All" button */
+#clear-all{
+    width:6rem;
+    height:2.5rem;
+    margin-left:auto;
+    border:none;
+    padding-bottom:none;
+    cursor:pointer;
+}
+
+#clear-all:hover, #clear-all:focus{
+    text-decoration: underline;
 }
 
 main .text.green{

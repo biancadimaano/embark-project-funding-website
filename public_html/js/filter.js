@@ -48,6 +48,34 @@ let displayed_info_cards = 6;
 
 let search_term = "";
 
+/* 
+  Clear All button
+*/
+
+const clear_all = document.querySelector('#clear-all');
+
+clear_all.addEventListener('click', () => {
+  selected_categories = [];
+  selected_type = null;
+  displayed_info_cards = 6;
+  search_term = "";
+  console.log("click");
+
+  // Reset the checkboxes and search input
+  document.querySelectorAll('#details-category input[type="checkbox"]').forEach(checkbox => {
+    checkbox.checked = false;
+  });
+
+  document.querySelectorAll('#details-type input[type="checkbox"]').forEach(checkbox => {
+    checkbox.checked = false;
+  });
+
+  document.getElementById('searchInput').value = ""; // Clear the search input
+
+  console.log("Filters cleared.");
+  update_filtered_info_cards(); // Update the display 
+});
+
 // Event listener to capture changes in the search input
 document.getElementById('searchInput').addEventListener('input', function () {
   search_term = this.value.toLowerCase(); // Capture the input and convert it to lowercase
