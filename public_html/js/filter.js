@@ -12,15 +12,15 @@
 
 var details = document.querySelector("details");
 
-details.addEventListener("toggle", (event) => {
-    if (details.open) {
-      /* The element was toggled open */
-      console.log("open");
-    } else {
-      /* The element was toggled closed */
-      console.log("close");
-    }
-  });
+// details.addEventListener("toggle", (event) => {
+//     if (details.open) {
+//       /* The element was toggled open */
+//       console.log("open");
+//     } else {
+//       /* The element was toggled closed */
+//       console.log("close");
+//     }
+//   });
 
 /*
   Filtering by category and type using the dropdown menus
@@ -59,7 +59,7 @@ clear_all.addEventListener('click', () => {
   selected_type = null;
   displayed_info_cards = 6;
   search_term = "";
-  console.log("click");
+  // console.log("Click clear All");
 
   // Reset the checkboxes and search input
   document.querySelectorAll('#details-category input[type="checkbox"]').forEach(checkbox => {
@@ -72,14 +72,14 @@ clear_all.addEventListener('click', () => {
 
   document.getElementById('searchInput').value = ""; // Clear the search input
 
-  console.log("Filters cleared.");
+  // console.log("Filters cleared.");
   update_filtered_info_cards(); // Update the display 
 });
 
 // Event listener to capture changes in the search input
 document.getElementById('searchInput').addEventListener('input', function () {
   search_term = this.value.toLowerCase(); // Capture the input and convert it to lowercase
-  console.log("Search term:", search_term);
+  // console.log("Search term:", search_term);
   update_filtered_info_cards();
 });
 
@@ -156,7 +156,7 @@ function update_displayed_info_cards(){
   const summary_text_type = document.querySelector('.button.filter.type summary');
 
   displayed_info_cards = visible_cards.length;
-  console.log("Displaying: " + displayed_info_cards);
+  // console.log("Displaying: " + displayed_info_cards);
   /*
     Update the text thats says the number of results ('_ Results')
   */
@@ -252,7 +252,7 @@ document.querySelectorAll('#details-category input[type="checkbox"]').forEach(ch
     } else {
       uncheck_category(this.id);
     }
-    console.log("Checked categories:", selected_categories);
+    // console.log("Checked categories:", selected_categories);
     update_filtered_info_cards();
   });
 });
@@ -260,7 +260,7 @@ document.querySelectorAll('#details-category input[type="checkbox"]').forEach(ch
 document.querySelectorAll('#details-type input[type="radio"]').forEach(radio => {
   radio.addEventListener('change', function () {
     selected_type = this.value;
-    console.log("Selected type:", selected_type);
+    // console.log("Selected type:", selected_type);
     update_filtered_info_cards();
   });
 });
@@ -269,7 +269,7 @@ document.querySelectorAll('#details-type input[type="checkbox"]').forEach(checkb
   checkbox.addEventListener('change', function () {
     if (this.checked) {
       selected_type = this.value;
-      console.log("Selected type:", selected_type);
+      // console.log("Selected type:", selected_type);
     } else {
       selected_type = null;
     }
