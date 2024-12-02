@@ -72,10 +72,6 @@ header p{
     background-color:#96C6B3;
 }
 
-.button.green:hover, .button.green:focus, .button.light-green:hover, .button.light-green:focus{
-    background-color:#B3B3B3;
-}
-
 .button{
     font-family:'Montserrat', sans-serif;
     font-weight:bold;
@@ -105,11 +101,16 @@ header p{
 }
 
 .button.white{
+    display:block;
     color:black;
     background-color:white;
     font-size:1rem;
     padding:0.75rem;
     margin-bottom:1.5rem;
+}
+
+.button:hover, .button:focus{
+    background-color:#B3B3B3;
 }
 
 /* Funding Opportunities section
