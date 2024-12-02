@@ -32,7 +32,7 @@ function autocomplete(inp, arr) {
         currentFocus = -1;
 
         // Create a DIV element to contain the items (autocomplete suggestions)
-        a = document.createElement("DIV");
+        a = document.createElement("div");
         a.setAttribute("id", this.id + "autocomplete-list");
         a.setAttribute("class", "autocomplete-items");
 
@@ -46,7 +46,7 @@ function autocomplete(inp, arr) {
                 b = document.createElement("DIV");
 
                 // Make the matching letters bold
-                b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                b.innerHTML = arr[i].substr(0, val.length);
                 b.innerHTML += arr[i].substr(val.length);
 
                 // Insert a hidden input to hold the selected value

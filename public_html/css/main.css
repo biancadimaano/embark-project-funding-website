@@ -296,12 +296,11 @@ input:-webkit-autofill:focus {
 .autocomplete-items{
     position:absolute;
     width: 100%;
-    border: 0.15rem solid #14795F;
-    border-bottom: none;
-    border-top: none;
+    background-color:white;
+    border: 0.15rem solid #6F9E94;
+    border-radius: 0.85rem;
     z-index:99;
-
-    top:100%;
+    top: calc(100% + 0.5rem);
     left:0;
     right:0;
 }
@@ -309,8 +308,6 @@ input:-webkit-autofill:focus {
 .autocomplete-items div {
     padding: 1rem;
     cursor: pointer;
-    background-color: #fff;
-    border-bottom: 0.15rem solid #d4d4d4;
 }
 
 .autocomplete-items div:hover {
@@ -320,7 +317,9 @@ input:-webkit-autofill:focus {
 
 .autocomplete-active {
     /*when navigating through the items using the arrow keys:*/
-    background-color: #14795F !important;
+    background-color: #6F9E94 !important;
+    border-radius:0.65rem;
     color: #ffffff;
+    margin:0.25rem;
 }
 

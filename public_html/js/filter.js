@@ -12,6 +12,7 @@
 
 var details = document.querySelector("details");
 
+
 // details.addEventListener("toggle", (event) => {
 //     if (details.open) {
 //       /* The element was toggled open */
@@ -154,6 +155,10 @@ function update_displayed_info_cards(){
   const visible_cards = document.querySelectorAll('.info-card.home.show');
   const summary_text_category = document.querySelector('.button.filter.category summary');
   const summary_text_type = document.querySelector('.button.filter.type summary');
+  const category_dropdown = document.querySelector(".button.filter.category");
+  const details_category_dropdown = document.querySelector("#details-category");
+  const type_dropdown = document.querySelector(".button.filter.type");
+  const details_type_dropdown = document.querySelector("#details-type");
 
   displayed_info_cards = visible_cards.length;
   // console.log("Displaying: " + displayed_info_cards);
@@ -168,16 +173,49 @@ function update_displayed_info_cards(){
   if(selected_categories.length == 0){
     summary_text_category.innerHTML = 'Category';
     summary_text_category.style.color = "#4D4D4D";
+
+    /* 
+      Event listener to detect if the <details> element is open or closed.
+      Checks whenever a <details> element is clicked.
+
+      Resources for <details> event listener:
+        https://stackoverflow.com/questions/7363117/detecting-the-opening-or-closing-of-a-details-element
+        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details
+    */
+    // Check if the <details> element is not open
+    details_category_dropdown.addEventListener("toggle", (event) => {
+      if (!details_category_dropdown.open) {
+        /* The element was toggled open */
+        category_dropdown.style.border = "none";
+      }
+    });
   }
   // Using else if for readability
   else if(selected_categories.length > 0){
     summary_text_category.innerHTML = selected_categories.length + ' Selected';
     summary_text_category.style.color = "#6F9E94";
+    category_dropdown.style.border = "0.15rem solid #6F9E94";
   }
 
   if(selected_type == null){
     summary_text_type.innerHTML = 'Type';
     summary_text_type.style.color = "#4D4D4D";
+
+    /* 
+      Event listener to detect if the <details> element is open or closed.
+      Checks whenever a <details> element is clicked.
+
+      Resources for <details> event listener:
+        https://stackoverflow.com/questions/7363117/detecting-the-opening-or-closing-of-a-details-element
+        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details
+    */
+    // Check if the <details> element is not open
+    details_type_dropdown.addEventListener("toggle", (event) => {
+      if (!details_type_dropdown.open) {
+        /* The element was toggled open */
+        type_dropdown.style.border = "none";
+      }
+    });
   }
   // Using else if for readability
   else if(selected_type != null){
@@ -194,6 +232,7 @@ function update_displayed_info_cards(){
         break;
     }
     summary_text_type.style.color = "#6F9E94";
+    type_dropdown.style.border = "0.15rem solid #6F9E94";
   }
 
   /* 

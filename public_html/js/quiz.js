@@ -129,7 +129,7 @@ document.querySelectorAll('#question-categories input[type="checkbox"]').forEach
       }
       console.log("Checked categories:", selected_categories);
       update_filtered_info_cards();
-    });
+    });F
   });
   
 document.querySelectorAll('#question-types input[type="checkbox"]').forEach(checkbox => {
