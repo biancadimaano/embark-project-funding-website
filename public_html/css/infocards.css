@@ -11,24 +11,24 @@
 	 ========================================================================== */
 
     /* Setting the information card text to Open Sans*/
-    .info-card.home p{
+    .info-card p{
         font-family:'Open Sans', sans-serif; 
         font-weight: 600; /* Semibold font weight is 600 */ 
     }
 
-    .info-card.home li, .info-card.home h3, .info-card.home em, .info-card.home .learn-more{
+    .info-card li, .info-card h3, .info-card em, .info-card .learn-more{
         font-family:'Montserrat', sans-serif;
         font-weight:bold;
         font-style:normal;
     }
 
-    .info-card.home p, .info-card.home ul, .info-card.home h3, .info-card.home em{
+    .info-card p, .info-card ul, .info-card h3, .info-card em{
         padding:0 1.5rem;  
         margin:0;
     }
 
     /* Styling the information card div */
-    .info-card.home{
+    .info-card{
         display:grid;
         row-gap:0.5rem;
 
@@ -39,7 +39,7 @@
     }
 
     /* Styling the category tags */
-    .info-card.home ul{
+    .info-card ul{
         list-style:none;
         padding-top:1rem;
     }
@@ -53,24 +53,24 @@
     }
 
     /* Styling the grant title */
-    .info-card.home h3{
+    .info-card h3{
         font-size:1.4rem;
     }
 
     /* Styling the grant type */
-    .info-card.home .text.type{ 
+    .info-card .text.type{ 
         font-size:1.05rem;
         font-weight:600; /* Semibold font weight is 600 */
     }
 
     /* Styling the grant amount */
-    .info-card.home em{
+    .info-card em{
         font-size:1.5rem;
         padding-top:1.5rem;
     }
 
     /* Styling the application deadline */
-    .info-card.home .text.deadline{
+    .info-card .text.deadline{
         color:black;
         font-size:1.05rem;
         font-weight:600;
