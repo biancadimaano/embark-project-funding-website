@@ -23,26 +23,31 @@ function autocomplete(inp, arr) {
     // Execute when someone types in the text field
     inp.addEventListener("input", function(e) {
         var a, b, i, val = this.value;
-        
+        var found = false; // Flag to track if matches are found
+
         // Close any already open lists of autocompleted values
         closeAllLists();
-        
+
         if (!val) { return false; }
 
         currentFocus = -1;
-
-        // Create a DIV element to contain the items (autocomplete suggestions)
-        a = document.createElement("div");
-        a.setAttribute("id", this.id + "autocomplete-list");
-        a.setAttribute("class", "autocomplete-items");
-
-        // Append the DIV element as a child of the autocomplete container
-        this.parentNode.appendChild(a);
 
         // Loop through the array of available opportunities
         for (i = 0; i < arr.length; i++) {
             // Check if the item starts with the same letters as the input
             if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+                if (!found) {
+                    // Create a DIV element to contain the items (autocomplete suggestions)
+                    a = document.createElement("div");
+                    a.setAttribute("id", this.id + "autocomplete-list");
+                    a.setAttribute("class", "autocomplete-items");
+
+                    // Append the DIV element as a child of the autocomplete container
+                    this.parentNode.appendChild(a);
+                }
+
+                found = true; // Set the flag to true if a match is found
+
                 b = document.createElement("DIV");
 
                 // Make the matching letters bold
@@ -61,6 +66,11 @@ function autocomplete(inp, arr) {
                 // Append the item to the autocomplete list
                 a.appendChild(b);
             }
+        }
+
+        // If no matches found, close the list
+        if (!found) {
+            closeAllLists();
         }
     });
 
