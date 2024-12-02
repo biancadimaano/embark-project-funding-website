@@ -48,31 +48,41 @@
         display:inline-block;
         color:#14795F;
         text-align:center;
-        font-size:0.8rem;
+        /* Mobile font size for *smaller* paragraph elements
+            Reference: https://boosted.orange.com/docs/4.6/content/typography/ */
+        font-size:0.875rem;
         margin-right:0.75rem;
     }
 
     /* Styling the grant title */
     .info-card h3{
-        font-size:1.4rem;
+        /* Mobile font size for heading h3 elements
+            Reference: https://boosted.orange.com/docs/4.6/content/typography/ */
+        font-size:1.125rem;
     }
 
     /* Styling the grant type */
     .info-card .text.type{ 
-        font-size:1.05rem;
+        /* Mobile font size for *smaller* paragraph elements
+            Reference: https://boosted.orange.com/docs/4.6/content/typography/ */
+        font-size:0.875rem;
         font-weight:600; /* Semibold font weight is 600 */
     }
 
     /* Styling the grant amount */
     .info-card em{
-        font-size:1.5rem;
+        /* Using same mobile font size as mobile heading h3 elements 
+            Reference: https://boosted.orange.com/docs/4.6/content/typography/ */
+        font-size:1.125rem;
         padding-top:1.5rem;
     }
 
     /* Styling the application deadline */
     .info-card .text.deadline{
         color:black;
-        font-size:1.05rem;
+        /* Mobile font size for *smaller* paragraph elements
+            Reference: https://boosted.orange.com/docs/4.6/content/typography/ */
+        font-size:0.875rem;
         font-weight:600;
         margin-top:-0.25rem;
     }
@@ -82,7 +92,9 @@
         color:#14795F;
         border:0.15rem solid #14795F;
         border-color:#14795F;
-        font-size: 1rem;
+        /* Mobile font size for *smaller* paragraph elements
+            Reference: https://boosted.orange.com/docs/4.6/content/typography/ */
+        font-size: 0.875rem;
         text-align:center;
         text-decoration: none;
 

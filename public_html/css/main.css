@@ -46,24 +46,32 @@ header{
 h1, main h2{
     font-family:'Montserrat', sans-serif;
     font-weight:800;
-    font-size:2.25rem;
-}
-
-main h2{
-    margin-bottom:1.5rem;
 }
 
 h1{
     max-width:24.375rem;
     color:white;
+    /* Mobile font size for *display* h1 elements
+        Reference: https://boosted.orange.com/docs/4.6/content/typography/ */
+    font-size:1.875rem;
 }
 
 header p{
-    font-size:1.05rem;
+    /* Mobile font size for body copy
+        Reference: https://boosted.orange.com/docs/4.6/content/typography/ */
+    font-size:1rem;
     margin-bottom:2rem;
     max-width:20rem;
     color:white;
 }
+
+main h2{
+    margin-bottom:1.5rem;
+    /* Mobile font size for *display* h2 elements
+        Reference: https://boosted.orange.com/docs/4.6/content/typography/ */
+    font-size: 1.5rem;
+}
+
 
 .button.green{
     background-color:#14795F;
@@ -76,7 +84,7 @@ header p{
 .button{
     font-family:'Montserrat', sans-serif;
     font-weight:bold;
-    font-size:0.9rem;
+    font-size:0.875rem;
     color:white;
     text-decoration:none;
     text-align:center;
@@ -105,7 +113,7 @@ header p{
     display:block;
     color:black;
     background-color:white;
-    font-size:1rem;
+    font-size:0.875rem;
     padding:0.75rem;
     margin-bottom:1.5rem;
 }
@@ -149,7 +157,7 @@ main .text.green{
 
 main .text{
     font-weight:600; /* Semibold font weight is 600 */
-    font-size:1.25rem;
+    font-size:1rem;
 }
 
 /* Styling the filter buttons (Category and Type buttons) and search bar */
@@ -284,7 +292,7 @@ input:-webkit-autofill:focus {
 .text.gray{
     font-family:'Montserrat', sans-serif;
     font-weight:bold;
-    font-size:1.4rem;
+    font-size:1.125rem;
     margin:2.5rem 0 -1rem 0;
 }
 
