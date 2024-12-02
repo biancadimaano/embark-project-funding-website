@@ -17,7 +17,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Jersey+20&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body data-page-type="quiz-q2">
+    <div class="background-image top"></div>
+
     <a href = "index.html" class="homepage-button">&lt; Back To Homepage</a>
 
     <!-- Using a <fieldset> instead of a <div> -->
@@ -25,12 +27,11 @@
     <!-- Resources: -->
         <!-- https://www.a11ymatters.com/pattern/checkbox/ -->
         <!-- https://www.w3schools.com/tags/tag_fieldset.asp -->
-    <fieldset class="quiz-choices">
+    <fieldset class="quiz-choices" id="question-categories">
         <!-- Page title -->
-        <legend>Q2: How much funds are you looking for?</legend>
+        <legend>Q2: What categories best align with your initiative?</legend>
         <p>Select all that apply</p>
 
-        
         <!-- BIPOC -->
         <div class="quiz-choices-item">
             <input type="checkbox" id="bipoc" class="input-checkbox" name="category" value="bipoc"">
@@ -62,7 +63,7 @@
         <div class="quiz-choices-item">
             <input type="checkbox" id="emergency-safety" class="input-checkbox" name="category" value="emergency-safety">
             <label for="emergency-safety">Emergency/Safety</label>
-            <p>Projects or initiatives that focus on crisis response and community safety. Applicable for projects related to extreme weather events and other climate adaptation measures.<p>
+            <p>Projects or initiatives that focus on crisis response and community safety. Applicable for projects related to extreme weather events and other climate adaptation measures.</p>
         </div>
         
         <!-- Youth -->
@@ -74,10 +75,12 @@
     </fieldset>
 
     <nav>
-        <a href="quiz-q3.html" class="button green">Next Question</a>
+        <a href="quiz-q3.html" class="button green" data-next-page="quiz-q3.html">Next Question</a>
         <a href="quiz-q1.html" class="button light-green">Previous Question</a>
-
     </nav>
 
+    <div class="background-image bottom"></div>
+
+    <script src="../js/quiz.js"></script>
 </body>
 </html> 

@@ -6,6 +6,8 @@
     <title>Your Funding Opportunity Results</title>
     
     <link rel ="stylesheet" href="../css/normalize.css">
+    <link rel = "stylesheet" href="../css/infocards.css">
+    <link rel = "stylesheet" href="../css/grid-home.css">
     <link rel = "stylesheet" href="../css/quiz.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,42 +18,137 @@
     <link href="https://fonts.googleapis.com/css2?family=Jersey+20&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body data-page-type="quiz-results">
+    <div class="background-image top"></div>
+
     <a href = "index.html" class="homepage-button">&lt; Back To Homepage</a>
     <h1>Your Funding Opportunity Results</h1>
 
+    <div class="grid results">
 
-    <div class = "summary-card">
+        <!-- EcoAction Community Funding Program Information Card-->
+        <div class="info-card quiz climate community grant">
+            <!-- Category tags -->
+            <ul>
+                <li>CLIMATE</li>
+                <li>COMMUNITY</li>
+            </ul>
+            <!-- Title -->
+            <h3>EcoAction Community Funding Program</h3>
+            <!-- Type -->
+            <p class="text type">Grant</p>
+            <!-- Grant amount -->
+            <em>$25,000 - $100,000</em>
+            <!-- Application deadline -->
+            <p class="text deadline">Deadline: October 15</p>
+            <!-- More info button -->
+            <a href="" class="learn-more" aria-label="">LEARN MORE</a>
+        </div>
 
-        <h2 class = "title">Assembly Grant</h2>
-        <p class = "type">Grant</p>
+        <!-- BC Hydro Broad Impact Grants -->
+        <div class="info-card quiz clean-energy youth emergency-safety grant">
+            <!-- Category tags -->
+            <ul>
+                <li>CLEAN ENERGY</li>
+                <li>YOUTH</li>
+                <li>EMERGENCY/SAFETY</li>
+            </ul>
+            <!-- Title -->
+            <h3>BC Hydro Broad Impact Grants</h3>
+            <!-- Type -->
+            <p class="text type">Grant</p>
+            <!-- Grant amount -->
+            <em>$10,000</em>
+            <!-- Application deadline -->
+            <p class="text deadline">Deadline: March 31</p>
+            <!-- More info button -->
+            <a href="" class="learn-more" aria-label="">LEARN MORE</a>
+        </div>
+        
+        <!-- Assembly Grant -->
+        <div class="info-card quiz climate youth grant">
+            <!-- Category tags -->
+            <ul>
+                <li>CLIMATE</li>
+                <li>YOUTH</li>
+            </ul>
+            <!-- Title -->
+            <h3>Assembly Grant</h3>
+            <!-- Type -->
+            <p class="text type">Grant</p>
+            <!-- Grant amount -->
+            <em>$500 - $5000</em>
+            <!-- Application deadline -->
+            <p class="text deadline">Rolling Deadline</p>
+            <!-- More info button -->
+            <a href="" class="learn-more" aria-label="">LEARN MORE</a>
+        </div>
 
-        <h2 class = "grant-amount">$500 - $5000</h2>
-        <ul>
-        <li class ="summary-categories">Climate</li>
-        <li class ="summary-categories">Youth</li>
-        </ul>
-        <p class = "summary-text">Rolling Deadline</p>
+        <!-- Ocean Action Grant -->
+        <div class="info-card quiz climate youth community grant">
+            <!-- Category tags -->
+            <ul>
+                <li>CLIMATE</li>
+                <li>YOUTH</li>
+                <li>COMMUNITY</li>
+            </ul>
+            <!-- Title -->
+            <h3>Ocean Action Grant</h3>
+            <!-- Type -->
+            <p class="text type">Grant</p>
+            <!-- Grant amount -->
+            <em>$250 - $3000</em>
+            <!-- Application deadline -->
+            <p class="text deadline">Deadline: October 11</p>
+            <!-- More info button -->
+            <a href="" class="learn-more" aria-label="">LEARN MORE</a>
+        </div>
 
-        <!-- Learn More Button  -->
-        <a href="https://www.bchydro.com/community/community-giving/grants.html" class = "summary-button">Learn More!</a>
+        <!-- National Youth Climate Activism Award -->
+        <div class="info-card quiz youth climate award">
+            <!-- Category tags -->
+            <ul>
+                <li>YOUTH</li>
+                <li>CLIMATE</li>
+            </ul>
+            <!-- Title -->
+            <h3>National Youth Climate Activism Award</h3>
+            <!-- Type -->
+            <p class="text type">Award</p>
+            <!-- Grant amount -->
+            <em>$500 - $1000</em>
+            <!-- Application deadline -->
+            <p class="text deadline">Deadline: March 1</p>
+            <!-- More info button -->
+            <a href="" class="learn-more" aria-label="">LEARN MORE</a>
+        </div>
+
+        <!-- Abundance Fellowship -->
+        <div class="info-card quiz climate youth program">
+            <!-- Category tags -->
+            <ul>
+                <li>CLIMATE</li>
+                <li>YOUTH</li>
+            </ul>
+            <!-- Title -->
+            <h3>Abundance Fellowship</h3>
+            <!-- Type -->
+            <p class="text type">Program</p>
+            <!-- Grant amount -->
+            <em>$100,000</em>
+            <!-- Application deadline -->
+            <p class="text deadline">Deadline: October 31</p>
+            <!-- More info button -->
+            <a href="" class="learn-more" aria-label="">LEARN MORE</a>
+        </div>
+
+
+
     </div>
+    <!-- END Section of grant/award/program results -->
 
-    <div class = "summary-card">
+    <div class="background-image bottom"></div>
 
-        <h2 class = "title">Ocean Action Grant</h2>
-        <p class = "type">Grant</p>
-
-        <h2 class = "grant-amount">$250 - $3000</h2>
-        <ul>
-        <li class ="summary-categories">Climate</li>
-        <li class ="summary-categories">Youth</li>
-        <li class ="summary-categories">Community</li>
-        </ul>
-        <p class = "summary-text">Deadline: October 11</p>
-
-        <!-- Learn More Button  -->
-        <a href="https://ocean.org/learn-explore/youth-programs/ocean-action-grant/" class = "summary-button">Learn More!</a>
-    </div>
+    <script src="../js/quiz.js"></script>
 </body>
 </html> 

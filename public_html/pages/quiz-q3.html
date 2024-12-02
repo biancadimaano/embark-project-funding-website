@@ -17,7 +17,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Jersey+20&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body data-page-type="quiz-q3">
+    <div class="background-image top"></div>
+
     <a href = "index.html" class="homepage-button">&lt; Back To Homepage</a>
 
     <!-- Using a <fieldset> instead of a <div> -->
@@ -25,7 +27,7 @@
     <!-- Resources: -->
         <!-- https://www.a11ymatters.com/pattern/checkbox/ -->
         <!-- https://www.w3schools.com/tags/tag_fieldset.asp -->
-    <fieldset class="quiz-choices">
+    <fieldset class="quiz-choices" id="question-types">
         <legend>Q3: What funding type are you looking for?</legend>
         <p>Select all that apply</p>
         <!-- Grants -->
@@ -49,8 +51,11 @@
     </fieldset> 
 
     <nav>
-        <a href="quiz-see-results.html" class="button green">Next Question</a>
+        <a href="quiz-see-results.html" class="button green" data-next-page="quiz-results.html">Next Question</a>
         <a href="quiz-q2.html" class="button light-green">Previous Question</a>
-
     </nav>
+
+    <div class="background-image bottom"></div>
+
+    <script src="../js/quiz.js"></script>
 </body>

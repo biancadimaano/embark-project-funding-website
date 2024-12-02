@@ -164,6 +164,17 @@ details summary:focus{
     color:#6F9E94;
 }
 
+/* Removing the triangle arrow on the details dropdown
+    Resource: https://www.eddymens.com/blog/how-to-remove-the-arrow-from-the-html-details-tag */
+details > summary{
+    list-style:none;
+}
+
+/* Removing the triangle arrow on the details dropdown
+    Resource: https://www.eddymens.com/blog/how-to-remove-the-arrow-from-the-html-details-tag */
+details > summary::-webkit-details-marker{
+    display: none;
+}
 
 /* Have to make this div position:relative so that category-dropdown position:absolute works correctly */
 .dropdowns{

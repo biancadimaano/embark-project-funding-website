@@ -15,7 +15,9 @@
     <!-- Google Font import for Montserrat typeface -->
     <link href="https://fonts.googleapis.com/css2?family=Jersey+20&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body data-page-type="quiz-q1">
+    <div class="background-image top"></div>
+
     <!-- Go back to homepage button -->
     <a href="index.html" class="homepage-button">&lt; Back To Homepage</a>
 
@@ -30,33 +32,37 @@
         <p>Select all that apply</p>
         <!-- $0 - $500 -->
         <div class="quiz-choices-item">
-            <input type="checkbox" id="option-0-to-500" class="input-checkbox" name="type" value="grant">
+            <input type="checkbox" id="option-0-to-500" class="input-checkbox" name="grant-amount" value="grant">
             <label for="option-0-to-500">$0 - $500</label>
         </div>
 
         <!-- $500 - $1000 -->
         <div class="quiz-choices-item">
-            <input type="checkbox" id="option-500-to-1000" class="input-checkbox" name="type" value="grant">
+            <input type="checkbox" id="option-500-to-1000" class="input-checkbox" name="grant-amount" value="grant">
             <label for="option-500-to-1000">$500 - $1000</label>
         </div>
         
         <!-- $1000 - $5000 -->
         <div class="quiz-choices-item">
-            <input type="checkbox" id="option-1000-to-5000" class="input-checkbox" name="type" value="grant">
+            <input type="checkbox" id="option-1000-to-5000" class="input-checkbox" name="grant-amount" value="grant">
             <label for="option-1000-to-5000">$1000 - $5000</label>
         </div>
 
         <!-- $5000+ -->
         <div class="quiz-choices-item">
-            <input type="checkbox" id="option-5000-plus" class="input-checkbox" name="type" value="grant">
+            <input type="checkbox" id="option-5000-plus" class="input-checkbox" name="grant-amount" value="grant">
             <label for="option-5000-plus">$5000+</label>
         </div>  
     </fieldset>
 
 
     <!-- Next/previous question buttons -->
-    <a href="quiz-q2.html" class="button green">Next Question</a>
+    <a href="quiz-q2.html" class="button green" data-next-page="quiz-q2.html">Next Question</a>
     <a href="quiz-start.html" class="button light-green">Back to Start</a>
+
+    <div class="background-image bottom"></div>
+
+    <script src="../js/quiz.js"></script>
 
 </body>
 </html> 

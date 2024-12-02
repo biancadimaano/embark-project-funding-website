@@ -1,8 +1,6 @@
 /* Dropdown menus
         ==================================================== */
 
-// }
-
 /* 
   Event listener to detect if the <details> element is open or closed.
   Checks whenever a <details> element is clicked.
