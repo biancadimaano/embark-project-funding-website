@@ -109,17 +109,8 @@
             </div>
 
             <!-- Text input to search -->
-            <input type="text" placeholder="Search by title..." list="opportunities" class="button filter search">
-            <datalist id="opportunities">
-                <option value="EcoAction Community Funding Program">
-                <option value="BC Hydro Broad Impact Grants">
-                <option value="Assembly Grant">
-                <option value="Ocean Action Grant">
-                <option value="National Youth Climate Activism Award">
-                <option value="Abundance Fellowship">
-            </datalist>
-            <div class="title-search-result-box">
-                
+            <div class="autocomplete">
+                <input type="text" id="searchInput" placeholder="Search by title..." list="opportunities" class="button filter search">
             </div>
         </div>
 
@@ -252,5 +243,6 @@
      </main>
      <!-- END Funding opportunities section -->
      <script src="../js/filter.js"></script>
+     <script src="../js/search.js"></script>
 </body>
 </html>

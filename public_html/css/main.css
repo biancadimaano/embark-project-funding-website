@@ -147,6 +147,10 @@ main .text{
     padding:1rem;
 }
 
+.button.filter.search{
+    width:100%;
+}
+
 /* Changing the outline colour when selecting the "Search by title..." button
     --> Resource for changing the outline colour when selecting a text input:
         https://stackoverflow.com/questions/43427993/change-the-color-of-a-input-field-when-selected 
@@ -179,6 +183,7 @@ details > summary::-webkit-details-marker{
 /* Have to make this div position:relative so that category-dropdown position:absolute works correctly */
 .dropdowns{
     position:relative;
+    z-index:1000;
 }
 
 .dropdowns, input{
@@ -265,3 +270,41 @@ input:-webkit-autofill:focus {
 .show{
     display: block;
 }
+
+
+/* Search bar */
+.autocomplete{
+    position:relative;
+}
+
+.autocomplete-items{
+    position:absolute;
+    width: 100%;
+    border: 0.15rem solid #14795F;
+    border-bottom: none;
+    border-top: none;
+    z-index:99;
+
+    top:100%;
+    left:0;
+    right:0;
+}
+
+.autocomplete-items div {
+    padding: 1rem;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 0.15rem solid #d4d4d4;
+}
+
+.autocomplete-items div:hover {
+    /*when hovering an item:*/
+    background-color: #e9e9e9;
+}
+
+.autocomplete-active {
+    /*when navigating through the items using the arrow keys:*/
+    background-color: #14795F !important;
+    color: #ffffff;
+}
+

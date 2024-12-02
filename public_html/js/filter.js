@@ -46,6 +46,15 @@ let selected_type = null;
 // Variable that stores the number of info cards that are currently displayed on the screen, default value: 6
 let displayed_info_cards = 6;
 
+let search_term = "";
+
+// Event listener to capture changes in the search input
+document.getElementById('searchInput').addEventListener('input', function () {
+  search_term = this.value.toLowerCase(); // Capture the input and convert it to lowercase
+  console.log("Search term:", search_term);
+  update_filtered_info_cards();
+});
+
 /*
   Removes a category from selected_categories when it is unchecked.
 */
@@ -180,26 +189,30 @@ function update_filtered_info_cards() {
     ? filtered_by_category.filter(card => filtered_by_type.includes(card)) 
     : filtered_by_type;
 
+  // Filter by search term (e.g., checking if the card title or description contains the search term)
+  let search_filtered_info_cards = filtered_info_cards.filter(card => {
+    let cardContent = card.textContent.toLowerCase(); // Get all text inside the card and convert to lowercase
+    return cardContent.includes(search_term); // Check if the search term is in the content
+  });
+
   all_info_cards.forEach(card => {
     card.style.display = 'none';
     card.classList.remove('show');
   });
 
-  if (selected_categories.length == 0 && !selected_type) {
+  if (selected_categories.length == 0 && !selected_type && search_term === "") {
+    // Show all cards when no filters or search term is applied
     all_info_cards.forEach(card => {
       card.style.display = 'grid';
       card.classList.add('show');
     });
   } else {
-    filtered_info_cards.forEach(card => {
+    // Show only filtered cards
+    search_filtered_info_cards.forEach(card => {
       card.style.display = 'grid';
       card.classList.add('show');
     });
   }
-
-  filtered_info_cards.forEach(card => {
-    console.log(card.className);
-  });
 
   update_displayed_info_cards();
 }
