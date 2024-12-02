@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<head>
+<html lang ="en">
+    <meta charset = "utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Funding Opportunity Quiz: Question 3</title>
+    
+    <link rel ="stylesheet" href="../css/normalize.css">
+    <link rel = "stylesheet" href="../css/quiz.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Font import for Open Sans typeface -->
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+20&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- Google Font import for Montserrat typeface -->
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+20&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <a href = "index.html" class="homepage-button">&lt; Back To Homepage</a>
+
+    <!-- Using a <fieldset> instead of a <div> -->
+    <!-- This helps to group related inputs and labels -->
+    <!-- Resources: -->
+        <!-- https://www.a11ymatters.com/pattern/checkbox/ -->
+        <!-- https://www.w3schools.com/tags/tag_fieldset.asp -->
+    <fieldset class="quiz-choices">
+        <legend>Q3: What funding type are you looking for?</legend>
+        <p>Select all that apply</p>
+        <!-- Grants -->
+        <div class="quiz-choices-item">
+            <input type="checkbox" id="grant" class="input-checkbox" name="type" value="grant">
+            <label for="grant">Grants</label>
+            <p>Provide funding for a project or initiative through a grant application process</p>
+        </div>
+        <!-- Awards -->
+        <div class="quiz-choices-item">
+            <input type="checkbox" id="award" class="input-checkbox" name="type" value="award">
+            <label for="award">Awards</label>
+            <p>Provide funding with the expectation that the applicants participate in a specific program or initiative to receive the funding.</p>
+        </div>
+        <!-- Programs -->
+        <div class="quiz-choices-item">
+            <input type="checkbox" id="program" class="input-checkbox" name="type" value="program">
+            <label for="program">Programs</label>   
+            <p>Provide funding to those nominated for an award based on past work or accomplishments, with the thought that students can apply that award money to the projects they are seeking to fund.</p>
+        </div>
+    </fieldset> 
+
+    <nav>
+        <a href="quiz-see-results.html" class="button green">Next Question</a>
+        <a href="quiz-q2.html" class="button light-green">Previous Question</a>
+
+    </nav>
+</body>

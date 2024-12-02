@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang ="en">
+<head>
+    <meta charset = "utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Funding Opportunity Quiz: Question 2</title>
+    
+    <link rel ="stylesheet" href="../css/normalize.css">
+    <link rel = "stylesheet" href="../css/quiz.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Font import for Open Sans typeface -->
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+20&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- Google Font import for Montserrat typeface -->
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+20&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <a href = "index.html" class="homepage-button">&lt; Back To Homepage</a>
+
+    <!-- Using a <fieldset> instead of a <div> -->
+    <!-- This helps to group related inputs and labels -->
+    <!-- Resources: -->
+        <!-- https://www.a11ymatters.com/pattern/checkbox/ -->
+        <!-- https://www.w3schools.com/tags/tag_fieldset.asp -->
+    <fieldset class="quiz-choices">
+        <!-- Page title -->
+        <legend>Q2: How much funds are you looking for?</legend>
+        <p>Select all that apply</p>
+
+        
+        <!-- BIPOC -->
+        <div class="quiz-choices-item">
+            <input type="checkbox" id="bipoc" class="input-checkbox" name="category" value="bipoc"">
+            <label for="bipoc">BIPOC</label>
+            <p>This funding opportunity prioritizes applications for projects or initiatives led by individuals/teams who are Black, Indigenous, and/or people of colour.</p>
+        </div>
+
+        <!-- Clean Energy -->
+        <div class="quiz-choices-item">
+            <input type="checkbox" id="clean-energy" class="input-checkbox" name="category" value="clean-energy">
+            <label for="clean-energy">Clean Energy</label>
+            <p>Projects or initiatives that involve renewable energy technology or carbon emission reduction.</p>
+        </div>
+
+        <!-- Climate -->
+        <div class="quiz-choices-item">
+            <input type="checkbox" id="climate" class="input-checkbox" name="category" value="climate">
+            <label for="climate">Climate</label>
+            <p>Projects or initiatives related to climate solutions.</p>
+
+        <!-- Community -->
+        <div class="quiz-choices-item">
+            <input type="checkbox" id="community" class="input-checkbox" name="category" value="community">
+            <label for="community">Community</label>    
+            <p>Projects or initiatives that support community building or are by-and-for a particular community.</p>
+        </div>
+
+        <!-- Emergency/Safety -->
+        <div class="quiz-choices-item">
+            <input type="checkbox" id="emergency-safety" class="input-checkbox" name="category" value="emergency-safety">
+            <label for="emergency-safety">Emergency/Safety</label>
+            <p>Projects or initiatives that focus on crisis response and community safety. Applicable for projects related to extreme weather events and other climate adaptation measures.<p>
+        </div>
+        
+        <!-- Youth -->
+        <div class="quiz-choices-item">
+            <input type="checkbox" id="youth" class="input-checkbox" name="category" value="youth">
+            <label for="youth">Youth</label>
+            <p>Projects or initiatives from individuals under 30 years old and/or projects or initiatives that support individuals under 30 years old.</p>
+        </div>
+    </fieldset>
+
+    <nav>
+        <a href="quiz-q3.html" class="button green">Next Question</a>
+        <a href="quiz-q1.html" class="button light-green">Previous Question</a>
+
+    </nav>
+
+</body>
+</html> 

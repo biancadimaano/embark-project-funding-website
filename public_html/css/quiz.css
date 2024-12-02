@@ -1,20 +1,153 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
-    font-family: 'Open Sans', 'Montserrat', sans-serif;
-    margin: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 1.5rem;
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+}
+
+.homepage-button, h1, legend, .button{
+    font-family: 'Montserrat', sans-serif;
 }
 
 .homepage-button{
-    font-family: 'Montserrat';
+    display:block;
 	font-weight: bold; 
 	font-size: 1rem;
 	color:#6F9E94;
 	text-decoration: none;
+    margin-top:8rem;
 }
+
 
 h1{
-    font-family: 'Montserrat';
-    font-weight: bold;
-    font-size: 1.50rem;
-    color: #000000;
+    font-size: 2rem;
 }
 
+legend{
+    font-size:1.35rem;
+    font-weight:bold;
+    margin:0;
+}
+
+p{
+    font-size:1.05rem;
+    color: #4D4D4D;
+}
+
+/* Selecting all paragraph elements that come after an <h2> tag 
+    Resource: https://stackoverflow.com/questions/7627910/target-all-p-elements-that-follow-an-h2-with-css
+    * Note: Originally had an <h2> and <div>, but later changed it to a <fieldset> with <legend>. So, now using this for <p> elements that come after <legend> tags
+*/
+legend ~ p{
+    font-style:italic;
+    font-weight:600;
+    margin-top: 0.5rem;
+    margin-bottom:2rem;
+}
+
+.button{
+    display:grid;
+
+    font-weight:bold;
+    font-size:1.2rem;
+    color:white;
+    text-decoration:none;
+    text-align:center;
+
+    margin:0;
+    padding:1rem;
+    border-radius:0.85rem;
+}
+
+.solo.button.green{
+    margin-top:auto;
+    margin-bottom:8rem;
+}
+
+.button.green{
+    background-color:#14795F;
+    margin-top:auto;
+    margin-bottom:1rem;
+}
+
+.button.light-green{
+    background-color:#96C6B3;
+    margin-bottom:4rem;
+}
+
+.button.green:hover, .button.green:focus, .button.light-green:hover, .button.light-green:focus{
+    background-color:#B3B3B3;
+}
+
+fieldset{
+    border:none;
+    padding:0;
+    margin-top:1.25rem;
+    margin-bottom:2rem;
+}
+
+/* The following code is referenced from: https://www.a11ymatters.com/pattern/checkbox/
+    These rules create a custom checkbox design, while allowing keyboard user to access the checkboxes and check them. 
+*/
+
+label{
+    user-select:none;
+    font-size:1.2rem;
+    font-weight:600; /* Semibold font weight is 600 */
+}
+
+/* Hiding the checkbox visually, but still keeping it in the DOM for screen readers and keyboard users */
+.input-checkbox {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+/* Custom checkbox design */
+.quiz-choices-item label{
+    cursor:pointer;
+    display:inline-block;
+    position:relative;
+}
+
+/* Custom checkbox design */
+.quiz-choices-item label:before{
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 1rem;
+    height: 1rem;
+    border: 0.15rem solid #14795F;
+    border-radius:0.25rem;
+    margin-right:1rem;
+}
+
+/* Hover state for label (option text) */
+.quiz-choices-item label:hover{
+    color: #14795F;
+}
+
+.quiz-choices-item input:checked + label:before{
+    background:#14795F;
+}
+
+/* Focus design */
+.quiz-choices-item input:focus-visible + label{
+    outline: dashed 2px #96C6B3;
+    outline-offset: 5px;
+}
+
+/* Code from https://www.a11ymatters.com/pattern/checkbox/ resource ends here */
+
+.quiz-choices-item{
+    margin-bottom:1rem;
+}
