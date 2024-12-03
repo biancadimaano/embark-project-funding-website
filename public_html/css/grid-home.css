@@ -33,6 +33,16 @@ details div{
 
 @media (width > 39.375rem){
 
+    main, .quiz-prompt, header{
+        padding-left: 4.5rem;
+        padding-right: 4.5rem;
+    }
+
+    main{
+        padding-top: 3.5rem;
+        padding-bottom:4rem;
+    }
+
     .quiz-prompt{
         display:block;
     }
@@ -104,6 +114,10 @@ details div{
     header .grid{
         grid-template-columns: 1fr 1fr;
         column-gap: 0.5rem;
+    }
+
+    .info-card{
+        max-height:18rem;
     }
 
 }
@@ -209,6 +223,10 @@ details div{
 
     .grid.results{
         grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .info-card{
+        max-height:20.75rem;
     }
 
     .info-card h3, .info-card em{
