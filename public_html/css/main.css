@@ -55,13 +55,16 @@ h1{
     /* Mobile font size for *display* h1 elements
         Reference: https://boosted.orange.com/docs/4.6/content/typography/ */
     font-size:1.875rem;
+    margin-bottom:0.75rem;
 }
 
 header p{
     /* Mobile font size for body copy paragraph element
         Reference: https://boosted.orange.com/docs/4.6/content/typography/ */
     font-size:1rem;
-    margin-bottom:2rem;
+    line-height:1.5rem;
+    margin-top:0;
+    margin-bottom:3rem;
     max-width:20rem;
     color:white;
 }
@@ -143,7 +146,6 @@ main{
 
 /* Styling the "Sort by" text */
 main .text.light-gray{
-    color:#B3B3B3;
     margin:0;
 }
 
@@ -217,7 +219,7 @@ main .text{
     border: 0.15rem solid #6F9E94;
 }
 
-details summary:focus{
+details summary:focus, details summary:active, details:focus, details:active{
     outline-color:#6F9E94;
     color:#6F9E94;
 }
@@ -259,7 +261,7 @@ details input{
     position:absolute;
     background-color:white;
     padding:1rem;
-    width:49%;
+    width:48.75%;
     border: 0.15rem solid #6F9E94;
     border-radius:0.85rem;
 }
