@@ -80,7 +80,7 @@ clear_all.addEventListener('click', () => {
 // Event listener to capture changes in the search input
 document.getElementById('searchInput').addEventListener('input', function () {
   search_term = this.value.toLowerCase(); // Capture the input and convert it to lowercase
-  // console.log("Search term:", search_term);
+  console.log("Search term:", search_term);
   update_filtered_info_cards();
 });
 

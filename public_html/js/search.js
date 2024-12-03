@@ -60,6 +60,7 @@ function autocomplete(inp, arr) {
                 // When an item is clicked, set the value of the input field to the clicked value
                 b.addEventListener("click", function(e) {
                     inp.value = this.getElementsByTagName("input")[0].value;
+                    console.log("inp.value " + inp.value);
                     closeAllLists();
                 });
 
