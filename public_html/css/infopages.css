@@ -159,7 +159,7 @@ h3 ~ p{
     margin-bottom:1rem !important;
 }
 
-p ~ ul, p ~ p:not(.info-card p):not(h3 ~ p){
+p ~ ul, p ~ p:not(.info-card p):not(h3 ~ p):not(ul ~ p){
     margin-top:-2rem!important;
     margin-bottom:1rem !important;
 }
@@ -190,6 +190,10 @@ p ~ ul, p ~ p:not(.info-card p):not(h3 ~ p){
 
 /* Using the same media queries as grid-home.css */
 @media (width > 39.375rem){
+    body{
+        padding: 1.5rem 4.5rem;
+    }    
+
     h1{
     /* Using tablet font size for heading h1 elements
         Reference: https://boosted.orange.com/docs/4.6/content/typography/ */

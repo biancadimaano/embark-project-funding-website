@@ -35,7 +35,8 @@
         background-color:white;
         border-radius: 0.5rem;
 
-        max-height:15.5rem;
+        max-height:17rem;
+        z-index:2
     }
 
     .info-card a{

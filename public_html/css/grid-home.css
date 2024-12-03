@@ -104,6 +104,14 @@ details div{
         margin-left:20%;
     }
 
+    main .background-image{
+        background-size: 30rem;
+    }
+
+    main .background-image .bottom{
+        height: 30rem;
+    }
+
 }
 
 @media (width > 43.375rem){

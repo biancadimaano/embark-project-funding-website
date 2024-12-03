@@ -12,6 +12,7 @@
 }
 
 body{
+    min-height: 100vh;
     overflow-x: hidden;
 }
 
@@ -136,6 +137,8 @@ main h2{
 main{
     background-color:#ECEDED;
     padding:1.5rem;
+    position: relative;
+
 }
 
 /* Styling the "Sort by" text */
@@ -358,3 +361,27 @@ input:-webkit-autofill:focus {
     margin:0.25rem;
 }
 
+
+/* Background image of leaves 
+    Using 1 SVG image and repeating it with background-repeat
+    Resources: 
+        https://stackoverflow.com/questions/8679066/make-image-not-background-img-in-div-repeat
+        https://www.w3schools.com/css/css_background_repeat.asp
+*/
+main .background-image{
+    background-repeat: repeat-x;
+    background-image: url("../images/embark-leaves.svg");
+    background-size: 25rem;
+
+    position:absolute;
+    left:0;
+    width:100vw;
+
+    z-index: 1;
+}
+
+main .background-image.bottom{
+    height:25rem;
+    background-position: -2rem 0rem;
+    bottom:0;
+}
