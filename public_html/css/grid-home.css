@@ -31,11 +31,6 @@ details div{
     display:inline-block;
 }
 
-.info-card a{
-    display: block;
-}
-
-/* 574px / 16px = 35.875rem */
 @media (width > 35.875rem){
 
     .quiz-prompt{
@@ -45,6 +40,58 @@ details div{
     .button.white{
         display:inline-block;
         padding:1rem 2rem;
+    }
+
+    h1{
+        /* Using tablet font size for *display* h1 elements
+            Reference: https://boosted.orange.com/docs/4.6/content/typography/ */
+        font-size: 3.125rem;
+        /* Making its max width bigger so it is split into 2 lines instead of 3 */
+        max-width:27rem;
+    }
+
+    header p{
+        /* Using tablet font size for body copy paragraph elements
+            Reference: https://boosted.orange.com/docs/4.6/content/typography/ */
+        font-size:1.125rem;
+        /* Making max width bigger to fit more words on the first line */
+        max-width:26rem;
+    }
+
+    .quiz-prompt h2{
+        /* Using tablet font size for heading h2 elements
+            Reference: https://boosted.orange.com/docs/4.6/content/typography/ */
+        font-size:1.5rem;
+    }
+
+    main h2{
+        /* Using tablet font size for *display* h2 elements
+            Reference: https://boosted.orange.com/docs/4.6/content/typography/ */
+        font-size:2.5rem;
+    }
+
+    .info-card h3, .info-card em{
+        font-size:1.25rem;        
+    }
+
+    .info-card{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .info-card ul, .info-card h3, .info-card .text.type, .info-card em{
+        grid-column: span 2;
+    }
+
+    .info-card ul{
+        margin-top:0.25rem;
+    }
+
+    .info-card a{
+        position:relative;
+        bottom:1.25rem;
+        margin-top: 0;
+        margin-bottom:0;
+        margin-left:20%;
     }
 
 }
@@ -58,20 +105,65 @@ details div{
         grid-template-columns: 1fr 1fr;
         column-gap: 0.5rem;
     }
-    
+
 }
 
-@media (width > 52rem){
+@media (width > 56.875rem){
     .grid.results{
-        grid-template-columns: 25rem 25rem;
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         column-gap:1.5rem;
         row-gap:1.5rem;
     }
 
+    .info-card{
+        grid-template-columns: 1fr;
+    }
+
+    .info-card ul, .info-card h3, .info-card .text.type, .info-card em{
+        grid-column: span 1;
+    }
+
+    .info-card ul{
+        margin-top:0.15rem;
+    }
+
+    .info-card em{
+        margin-top:2rem;
+    }
+
+    .info-card a{
+        position:static;
+        bottom:auto;
+        margin-left:1.5rem;
+        margin-bottom:1.25rem;
+    }
+
 }
 
-@media (width > 85.625rem){
+@media (width > 68.0625rem){
+    .info-card{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .info-card ul, .info-card h3, .info-card .text.type, .info-card em{
+        grid-column: span 2;
+    }
+
+    .info-card ul{
+        margin-top:0.25rem;
+    }
+
+    .info-card a{
+        position:relative;
+        bottom:1.25rem;
+        margin-top: 0;
+        margin-bottom:0;
+        margin-left:20%;
+    }
+}
+
+@media (width > 98.0625rem){
     header section{
         margin-left:20vw;
     }
@@ -89,8 +181,8 @@ details div{
     }
 
     h1{
-        font-size:2.75rem;
-        max-width:30rem;
+        font-size:3.75rem;
+        max-width:34rem;
     }
 
     header p{
@@ -116,18 +208,63 @@ details div{
     }
 
     .grid.results{
-        grid-template-columns: 25rem 25rem 25rem;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .info-card h3, .info-card em{
+        font-size:1.5rem;        
+    }
+    
+    .info-card li, .info-card .text.type, .info-card .text.deadline, .info-card a{
+        font-size:1rem;
+    }
+
+    .info-card{
+        grid-template-columns: 1fr;
+    }
+
+    .info-card ul, .info-card h3, .info-card .text.type, .info-card em{
+        grid-column: span 1;
+    }
+
+    .info-card ul{
+        margin-top:0.15rem;
+    }
+
+    .info-card em{
+        margin-top:2rem;
+    }
+
+    .info-card a{
+        position:static;
+        bottom:auto;
+        margin-left:1.5rem;
+        margin-bottom:1.25rem;
     }
 }
 
 @media (width > 113.75rem){
-    .grid.results{
-        grid-template-columns: 25rem 25rem 25rem 25rem;
+    .info-card{
+        grid-template-columns: 1fr 1fr;
+        max-height:18.25rem;
     }
-}
 
-@media (width > 140.4375rem){
-    .grid.results{
-        grid-template-columns: 25rem 25rem 25rem 25rem 25rem;
+    .info-card ul, .info-card h3, .info-card .text.type, .info-card em{
+        grid-column: span 2;
+    }
+
+    .info-card h3{
+        max-width: 27rem;
+    }
+
+    .info-card ul{
+        margin-top:0.5rem;
+    }
+
+    .info-card a{
+        position:relative;
+        bottom:1.25rem;
+        margin-bottom:0;
+        margin-left:20%;
     }
 }

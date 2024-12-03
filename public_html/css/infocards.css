@@ -34,8 +34,11 @@
 
         background-color:white;
         border-radius: 0.5rem;
+    }
 
-        max-width:25rem;
+    .info-card a{
+        display: block;
+        max-height:2.25rem;
     }
 
     /* Styling the category tags */
@@ -59,6 +62,7 @@
         /* Mobile font size for heading h3 elements
             Reference: https://boosted.orange.com/docs/4.6/content/typography/ */
         font-size:1.125rem;
+        max-width:20rem;
     }
 
     /* Styling the grant type */

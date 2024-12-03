@@ -57,7 +57,7 @@ h1{
 }
 
 header p{
-    /* Mobile font size for body copy
+    /* Mobile font size for body copy paragraph element
         Reference: https://boosted.orange.com/docs/4.6/content/typography/ */
     font-size:1rem;
     margin-bottom:2rem;
@@ -101,12 +101,19 @@ main h2{
     padding:1.5rem;
 }
 
+.quiz-prompt h2{
+    /* Mobile font size for heading h2 elements
+        Reference: https://boosted.orange.com/docs/4.6/content/typography/ */
+    font-size:1.125rem;
+}
+
 .quiz-prompt h2, .quiz-prompt p{
     color:white;
 }
 
 .quiz-prompt p{
     margin-top:-0.5rem;
+    font-size:1rem;
 }
 
 .button.white{
@@ -159,6 +166,10 @@ main .text{
     font-weight:600; /* Semibold font weight is 600 */
     font-size:1rem;
 }
+
+/* .text-above-filters, .grid.filter, .button{
+    max-width:21rem;
+} */
 
 /* Styling the filter buttons (Category and Type buttons) and search bar */
 .button.filter{
