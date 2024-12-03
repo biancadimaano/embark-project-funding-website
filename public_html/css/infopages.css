@@ -36,6 +36,11 @@ h1{
     margin-top:2rem;
 }
 
+.homepage-button:hover, .homepage-button:focus{
+    text-decoration:underline;
+    color:#14795F;
+}
+
 /* Styling the category tags */
 header ul{
     list-style:none;
