@@ -66,6 +66,7 @@ header p{
 }
 
 main h2{
+    margin-top:0.5rem;
     margin-bottom:1.5rem;
     /* Mobile font size for *display* h2 elements
         Reference: https://boosted.orange.com/docs/4.6/content/typography/ */
@@ -146,7 +147,6 @@ main .text.light-gray{
 /* Styling the "Clear All" button */
 #clear-all{
     width:6rem;
-    height:2.5rem;
     margin-left:auto;
     border:none;
     padding-bottom:none;
@@ -167,9 +167,9 @@ main .text{
     font-size:1rem;
 }
 
-/* .text-above-filters, .grid.filter, .button{
-    max-width:21rem;
-} */
+.text-above-filters{
+    margin-bottom:0.5rem;
+}
 
 /* Styling the filter buttons (Category and Type buttons) and search bar */
 .button.filter{
