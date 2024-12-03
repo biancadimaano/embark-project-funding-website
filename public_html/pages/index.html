@@ -110,7 +110,9 @@
 
             <!-- Text input to search -->
             <div class="autocomplete">
-                <input type="text" autocomplete="off" id="searchInput" placeholder="Search by title..." class="button filter search">
+                <!-- Using aria-label to avoid the 'Avoid Browser Fallback' validator warning (https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/#naming_rule_avoid_fallback) -->
+                <!-- Resource: https://accessibilityinsights.io/info-examples/web/aria-input-field-name/ -->
+                <input type="text" autocomplete="off" id="searchInput" aria-label="Search Opportunity by Title" placeholder="Search by title..." class="button filter search">
             </div>
         </div>
 
@@ -135,7 +137,7 @@
                 <!-- Application deadline -->
                 <p class="text deadline">Deadline: October 15</p>
                 <!-- More info button -->
-                <a href="eco-action.html" class="learn-more" aria-label="">LEARN MORE</a>
+                <a href="eco-action.html" class="learn-more">Learn More</a>
             </div>
  
             <!-- BC Hydro Broad Impact Grants -->
@@ -155,7 +157,7 @@
                 <!-- Application deadline -->
                 <p class="text deadline">Deadline: March 31</p>
                 <!-- More info button -->
-                <a href="bc-hydro.html" class="learn-more" aria-label="">LEARN MORE</a>
+                <a href="bc-hydro.html" class="learn-more">Learn More</a>
             </div>
             
             <!-- Assembly Grant -->
@@ -174,7 +176,7 @@
                 <!-- Application deadline -->
                 <p class="text deadline">Rolling Deadline</p>
                 <!-- More info button -->
-                <a href="assembly.html" class="learn-more" aria-label="">LEARN MORE</a>
+                <a href="assembly.html" class="learn-more">Learn More</a>
             </div>
 
             <!-- Ocean Action Grant -->
@@ -194,7 +196,7 @@
                 <!-- Application deadline -->
                 <p class="text deadline">Deadline: October 11</p>
                 <!-- More info button -->
-                <a href="ocean-action.html" class="learn-more" aria-label="">LEARN MORE</a>
+                <a href="ocean-action.html" class="learn-more">Learn More</a>
             </div>
 
             <!-- National Youth Climate Activism Award -->
@@ -213,7 +215,7 @@
                 <!-- Application deadline -->
                 <p class="text deadline">Deadline: March 1</p>
                 <!-- More info button -->
-                <a href="national-youth.html" class="learn-more" aria-label="">LEARN MORE</a>
+                <a href="national-youth.html" class="learn-more">Learn More</a>
             </div>
 
             <!-- Abundance Fellowship -->
@@ -232,7 +234,7 @@
                 <!-- Application deadline -->
                 <p class="text deadline">Deadline: October 31</p>
                 <!-- More info button -->
-                <a href="abundance.html" class="learn-more" aria-label="">LEARN MORE</a>
+                <a href="abundance.html" class="learn-more">Learn More</a>
             </div>
         </div>
         <!-- END Section of grant/award/program results -->
