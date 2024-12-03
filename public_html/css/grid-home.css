@@ -31,7 +31,7 @@ details div{
     display:inline-block;
 }
 
-@media (width > 35.875rem){
+@media (width > 39.375rem){
 
     .quiz-prompt{
         display:block;
