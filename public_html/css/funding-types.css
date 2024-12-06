@@ -1,5 +1,5 @@
 body {
-    padding: 1.5rem 0;
+    padding: 0 0 1.5rem 0;
     margin: 0;
     background-color: #ECEDED;
 }
@@ -12,20 +12,23 @@ body {
     margin: 0;
 }
 
-a {
-    color: #14795F;
-    font-family: Montserrat;
-    text-decoration: none;
-    font-weight: 700;
-    background-color:none;
-    padding: 1.5rem;
+nav{
+    border-bottom: 0.15rem solid #14795F;
+    padding-top:1.25rem;
+    padding-bottom:1.25rem;
 }
 
-a:hover, a:focus {
-    transition-duration: 0.3s;
-    transition: 0.3s;
-    text-decoration: underline;
+.homepage-button {
+    color: #14795F;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-weight: 700;
+    margin-left:1.5rem;
+}
+
+.homepage-button:hover, .homepage-button:focus {
     color: #6F9E94;
+    transition: 0.2s ease-in-out;
 }
 
 header{
@@ -93,10 +96,10 @@ h1, h2, h3{
 }
 
 
-.button:hover, :focus {
+.button:hover, .button:focus {
     text-decoration: none;
     transition-property: background-color;
-    transition-duration: 0.3s;
+    transition-duration: 0.2s;
     background-color: #6F9E94;
     color: white;
 }
@@ -178,6 +181,10 @@ section div {
     
     h1, header p, a, #categories{
         padding: 0 4.5rem;
+    }
+
+    nav{
+        text-align: right;
     }
 
 }

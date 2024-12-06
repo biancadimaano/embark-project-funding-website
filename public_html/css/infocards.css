@@ -35,7 +35,6 @@
         background-color:white;
         border-radius: 0.5rem;
 
-        max-height:17rem;
         z-index:2
     }
 
@@ -65,7 +64,7 @@
         /* Mobile font size for heading h3 elements
             Reference: https://boosted.orange.com/docs/4.6/content/typography/ */
         font-size:1.125rem;
-        max-width:20rem;
+        max-width:24rem;
     }
 
     /* Styling the grant type */
@@ -114,7 +113,7 @@
     .learn-more:hover, .learn-more:focus, .more-info:hover, .more-info:focus{
         background-color:#14795F;
         color:white;
-        transition: 0.3s ease;
+        transition: 0.2s ease;
     }
 
     

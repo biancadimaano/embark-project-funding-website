@@ -1,15 +1,39 @@
 * {
     font-family: 'Open Sans', sans-serif;
     color: black;
+    box-sizing: border-box;
 }
 
 body{
-    padding:1.5rem 1.5rem;
+    /* padding:1.5rem 1.5rem; */
     position:relative;
     min-height:100vh;
     overflow-x:hidden;
-
+    background-color:#ECEDED;
 }
+
+main, header ul, h1, h1 ~ p, nav{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+nav{
+    border-bottom: 0.15rem solid #14795F;
+    padding:1.25rem 1.5rem;
+}
+
+.homepage-button {
+    color: #14795F;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.homepage-button:hover, .homepage-button:focus {
+    color: #6F9E94;
+    transition: 0.2s ease-in-out;
+}
+
 
 .info-card li, h1, .homepage-button, header li, .info-card em, .button.visit{
     font-family: 'Montserrat', sans-serif;
@@ -28,23 +52,21 @@ h1{
 
 /* Styling the homepage button */
 .homepage-button{
-    display:block;
 	font-weight: bold; 
 	font-size: 1rem;
-	color:#6F9E94;
+	color:#14795F;
 	text-decoration: none;
-    margin-top:2rem;
 }
 
 .homepage-button:hover, .homepage-button:focus{
-    text-decoration:underline;
-    color:#14795F;
+    transition: 0.2s;
+    text-decoration: underline;
+    color: #6F9E94;
 }
 
 /* Styling the category tags */
 header ul{
     list-style:none;
-    padding-left:0;
     margin-top: 2.5rem;
     margin-bottom:0;
 }
@@ -73,7 +95,6 @@ header p{
     row-gap:0.5rem;
 
     background-color:white;
-    border: 0.15rem solid #14795F;
     border-radius: 0.5rem;
 
     margin-top:2rem;
@@ -96,29 +117,29 @@ header p{
 }
 
 .info-card p:not(.semibold){
-    margin-bottom:0.35rem;
+    margin-bottom:0.75rem;
 }
 
 .line {
-    border-top: 0.15rem solid #4D4D4D;
-    margin: 0.5rem 1.5rem 0.5rem 1.5rem;
+    border-top: 0.15rem solid #14795F;
+    margin: 0.75rem 1.5rem 0.75rem 1.5rem;
 }
 
 .button.visit{
-    color:white;
-    background-color:#14795F;
-    /* Mobile font size for *smaller* paragraph elements
-        Reference: https://boosted.orange.com/docs/4.6/content/typography/ */
-    font-size: 0.875rem;
+    color:#14795F;
+    font-size: 1rem;
     text-align:center;
     text-decoration: none;
+    border: 0.15rem solid #14795F;
     border-radius: 0.25rem;
     padding:0.5rem 0;
-}
-
-.button.visit{
     display:grid;
     margin-bottom:8rem;
+}
+
+.button.visit:not(.info-card .button.visit){
+    margin-top:-14rem;
+    background-color:#ECEDED;
 }
 
 .info-card .button.visit{
@@ -126,12 +147,15 @@ header p{
 }
 
 .button.visit:hover, .button.visit:focus{
-    background-color: #B3B3B3;
-    transition: 0.3s ease-in;
+    /* Button on the bottom of the page (not inside info-card) would not have green background without !important */
+    background-color: #14795F !important;
+    color:white;
+    transition: 0.2s ease-in;
 }
 
 .paragraphs{
     padding-right:1rem;
+    margin-bottom:calc(12rem + 5rem);
 }
 
 .paragraphs section h2{
@@ -139,7 +163,7 @@ header p{
         Reference: https://boosted.orange.com/docs/4.6/content/typography/ */
     font-size:1.125rem;
     color:#14795F;
-    margin-top:2.5rem;
+    margin-top:1.85rem;
     margin-bottom:1rem;
 }
 
@@ -195,9 +219,14 @@ p ~ ul, p ~ p:not(.info-card p):not(h3 ~ p):not(ul ~ p){
 
 /* Using the same media queries as grid-home.css */
 @media (width > 39.375rem){
-    body{
-        padding: 1.5rem 4.5rem;
-    }    
+    main, header ul, h1, h1 ~ p, nav{
+        padding-left: 4.5rem;
+        padding-right: 4.5rem;
+    }
+
+    header ul{
+        margin-top:4rem;
+    }
 
     h1{
     /* Using tablet font size for heading h1 elements
@@ -243,15 +272,23 @@ p ~ ul, p ~ p:not(.info-card p):not(h3 ~ p):not(ul ~ p){
 }
 
 @media (width > 56.875rem){
+    header ul{
+        margin-top:6rem;
+    }
+
     main{
         display:grid;
         grid-template-columns: 22rem 1fr;
         column-gap: 5rem;
     }
 
+    nav{
+        text-align:right;
+    }
+
     .info-card{
         grid-template-columns: 1fr;
-        max-height:20rem;
+        max-height:22rem;
     }
 
     .info-card em, .info-card .deadline, .line, .button.visit{
@@ -273,7 +310,7 @@ p ~ ul, p ~ p:not(.info-card p):not(h3 ~ p):not(ul ~ p){
     .paragraphs{
         padding-bottom:1rem;
         padding-left:1rem;
-        background-color:white;
+        max-width:70rem;
     }
 
     .background-image{
@@ -285,10 +322,12 @@ p ~ ul, p ~ p:not(.info-card p):not(h3 ~ p):not(ul ~ p){
         background-position: -5rem 0rem;
         bottom:0;
     }
+
 }
 
 @media (width > 98.0625rem){
-    body{
-        padding: 1.5rem 8rem;
-    }    
+    main, header ul, h1, h1 ~ p, nav{
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
 }

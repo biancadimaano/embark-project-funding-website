@@ -25,11 +25,16 @@ html {
 /* Header
 	 ========================================================================== */
 
-header section{
-    padding:8rem 1.5rem 12rem 1.5rem;
+header{
+    padding-left:1.5rem;
+    padding-right:1.5rem;
 }
 
-header img{
+header section{
+    padding:10rem 0 12rem 0;
+}
+
+#header-image{
     position:absolute;
     top:0;
     left:0;
@@ -38,6 +43,16 @@ header img{
     height:100%;
     object-fit:cover;
     object-position:left;
+}
+
+#embark-logo{
+    position:absolute;
+    top:0;
+    left:0;
+    width:auto;
+    height:5.5rem;
+    padding-left:1.5rem;
+    padding-top:1.5rem;
 }
 
 header{
@@ -102,7 +117,8 @@ main h2{
 
 .quiz-prompt{
     background-color:#14795F;
-    padding:1.5rem;
+    padding:1.5rem 1.75rem;
+    margin-top:-1.5rem;
 }
 
 .quiz-prompt h2{
@@ -133,6 +149,10 @@ main h2{
     background-color:#B3B3B3;
 }
 
+header .button:hover, header .button:focus, .quiz-prompt .button:hover, .quiz-prompt .button:focus{
+    transition: 0.2s ease-in;
+}
+
 /* Funding Opportunities section
 	 ========================================================================== */
 
@@ -140,7 +160,7 @@ main{
     background-color:#ECEDED;
     padding:1.5rem;
     position: relative;
-
+    min-height:80vh;
 }
 
 /* Styling the "Sort by" text */
@@ -159,6 +179,8 @@ main .text.light-gray{
 
 #clear-all:hover, #clear-all:focus{
     text-decoration: underline;
+    transition:0.2s;
+    color:#14795F;
 }
 
 main .text.green{
@@ -216,6 +238,16 @@ main .text{
 .button.filter:focus, .button.filter:active, .button.filter[open]{
     outline-color:#6F9E94;
     border: 0.15rem solid #6F9E94;
+    /* Negative margin since without it, the outline makes the grid larger and shifts page elements downwards */
+    margin:-0.12rem;
+}
+
+#details-type, #details-category{
+    padding:0;
+}
+
+details summary{
+    padding:1rem;
 }
 
 details summary:focus, details summary:active, details:focus, details:active{
@@ -256,26 +288,28 @@ details input{
 }
 
 .details.open{
-    margin-top:1.5rem;
+    margin-top:0.75rem;
     position:absolute;
     background-color:white;
-    padding:1rem;
-    width:48.75%;
+    padding:0.75rem;
+    width:49.5%;
     border: 0.15rem solid #6F9E94;
-    border-radius:0.85rem;
+    border-radius:0.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.18); /* Resource: https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
 }
 
 .details.open.category{
-    left:0;
+    left:-0.15rem;
 }
 
 .details.open.type{
-    right:0;
+    right:-0.15rem;
 }
 
 /* Turn the cursor into a finger pointer when hovering the dropdown filter options */
 label{
-    cursor: pointer;
+    cursor:pointer;
+    padding:0.25rem;
 }
 
 /* Resource: https://stackoverflow.com/questions/1431726/css-selector-for-a-checked-radio-buttons-label */
@@ -283,10 +317,10 @@ input[type="checkbox"]:checked + label {
     color: #6F9E94;
 }
 
-/* Resource: https://stackoverflow.com/questions/1431726/css-selector-for-a-checked-radio-buttons-label */
-
-input[type="radio"]:checked + label {
-    color: #6F9E94;
+input[type="checkbox"]:hover + label {
+    background-color: #6F9E94;
+    color:white;
+    border-radius:0.25rem;
 }
 
 /* Styling the autocomplete options
@@ -300,7 +334,6 @@ input:-webkit-autofill:focus {
 
 .results{
     margin-top:2.5rem;
-    min-height:40rem;
 }
 
 /* Styling the "6 results" text */
@@ -316,6 +349,7 @@ input:-webkit-autofill:focus {
     /* Start as a hidden element, only shows when there are 0 results found from the filters*/
     display:none;
     color:#6F9E94;
+    margin-top:1.5rem;
 }
 
 /* How to filter elements
@@ -337,11 +371,12 @@ input:-webkit-autofill:focus {
     width: 100%;
     background-color:white;
     border: 0.15rem solid #6F9E94;
-    border-radius: 0.85rem;
+    border-radius: 0.5rem;
     z-index:99;
     top: calc(100% + 0.5rem);
     left:0;
     right:0;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.18); /* Resource: https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
 }
 
 .autocomplete-items div {
@@ -352,11 +387,22 @@ input:-webkit-autofill:focus {
 .autocomplete-items div:hover, .autocomplete-active {
     /* when hovering and navigating through the items using the arrow keys */
     background-color: #6F9E94 !important;
-    border-radius:0.65rem;
+    border-radius:0.35rem;
     color: #ffffff;
-    margin:0.25rem;
+    margin:0.5rem;
 }
 
+#searchInput-clear{
+    position:absolute;
+    top:0.75rem;
+    right:1rem;
+    background:none;
+    border:none;
+    font-size:1.25rem;
+    color: #B3B3B3;
+    cursor:pointer;
+    display:none;
+}
 
 /* Background image of leaves 
     Using 1 SVG image and repeating it with background-repeat
@@ -374,10 +420,23 @@ main .background-image{
     width:100vw;
 
     z-index: 1;
+    
 }
 
 main .background-image.bottom{
     height:25rem;
     background-position: -2rem 0rem;
     bottom:0;
+}
+
+/* Reference from Andrew: https://codepen.io/andrewhaw/pen/oNOBWme/9460a31735b47586e3aea5853789b498 */
+.dropdowns .line-one, .dropdowns .line-two{
+    display:block;
+}
+
+@media (width > 28.75rem){
+    /* Return to one line when there is enough space */
+    .dropdowns .line-one, .dropdowns .line-two{
+        display:inline;
+    }
 }
