@@ -1,3 +1,7 @@
+/* infopages.css
+    CSS rules for the individual grant information pages (abundance.html, assembly.html, etc.)
+	 ========================================================================== */
+
 * {
     font-family: 'Open Sans', sans-serif;
     color: black;
@@ -12,7 +16,9 @@ body{
     background-color:#ECEDED;
 }
 
-main, header ul, h1, h1 ~ p, nav{
+/* h1 ~ p selects paragaph elements the come after h1 elements
+    Resource: https://developer.mozilla.org/en-US/docs/Web/CSS/Subsequent-sibling_combinator */
+main, header ul, h1, h1 ~ p, .homepage-button{
     padding-left: 1.5rem;
     padding-right: 1.5rem;
 }
@@ -22,18 +28,20 @@ nav{
     padding:1.25rem 1.5rem;
 }
 
-.homepage-button {
-    color: #14795F;
-    font-family: 'Montserrat', sans-serif;
-    text-decoration: none;
-    font-weight: 700;
+.homepage-button{
+    display:block;
+	font-weight: bold; 
+	font-size: 1rem;
+	color:#14795F;
+	text-decoration: none;
+    font-size:0.875rem;
+    margin-top:2.5rem;
 }
 
-.homepage-button:hover, .homepage-button:focus {
+.homepage-button:hover, .homepage-button:focus{
+    transition: 0.2s;
     color: #6F9E94;
-    transition: 0.2s ease-in-out;
 }
-
 
 .info-card li, h1, .homepage-button, header li, .info-card em, .button.visit{
     font-family: 'Montserrat', sans-serif;
@@ -50,25 +58,11 @@ h1{
     margin-bottom:0.5rem;
 }
 
-/* Styling the homepage button */
-.homepage-button{
-	font-weight: bold; 
-	font-size: 1rem;
-	color:#14795F;
-	text-decoration: none;
-}
-
-.homepage-button:hover, .homepage-button:focus{
-    transition: 0.2s;
-    text-decoration: underline;
-    color: #6F9E94;
-}
-
 /* Styling the category tags */
 header ul{
     list-style:none;
-    margin-top: 2.5rem;
     margin-bottom:0;
+    margin-top:3rem;
 }
 
 header li{
@@ -116,13 +110,21 @@ header p{
     font-weight:600;
 }
 
+/* Selecting the paragraphs inside info-cards that are not of the semibold class 
+    Resource: https://developer.mozilla.org/en-US/docs/Web/CSS/:not */
 .info-card p:not(.semibold){
     margin-bottom:0.75rem;
 }
 
+/* Horizontal line on the info-cards */
 .line {
     border-top: 0.15rem solid #14795F;
     margin: 0.75rem 1.5rem 0.75rem 1.5rem;
+}
+
+/* Splitting a single line into two lines using spans */
+.line-one, .line-two{
+    display:block;
 }
 
 .button.visit{
@@ -137,6 +139,8 @@ header p{
     margin-bottom:8rem;
 }
 
+/* Selecting the "Visit Website" buttons that are not inside the info-cards 
+    Resource: https://developer.mozilla.org/en-US/docs/Web/CSS/:not */
 .button.visit:not(.info-card .button.visit){
     margin-top:-14rem;
     background-color:#ECEDED;
@@ -147,7 +151,7 @@ header p{
 }
 
 .button.visit:hover, .button.visit:focus{
-    /* Button on the bottom of the page (not inside info-card) would not have green background without !important */
+    /* Button on the bottom of the page (not inside info-card) would not have green background on focus/hover without !important */
     background-color: #14795F !important;
     color:white;
     transition: 0.2s ease-in;
@@ -155,7 +159,9 @@ header p{
 
 .paragraphs{
     padding-right:1rem;
+    padding-bottom:2rem;
     margin-bottom:calc(12rem + 5rem);
+    background-color: #ECEDED;
 }
 
 .paragraphs section h2{
@@ -184,10 +190,16 @@ header p{
     margin-bottom:3rem;
 }
 
+/* Selecting paragraphs elements that come immediately after h3 elements 
+    Resource: https://developer.mozilla.org/en-US/docs/Web/CSS/Subsequent-sibling_combinator*/
 h3 ~ p{
     margin-bottom:1rem !important;
 }
 
+/* Selecting:  
+    - unordered lists that come after paragraph elements
+    - paragraph elements that come after other paragraph elements, but not paragraphs that are inside the info cards, that come after h3, or come after unordered lists.
+    Resource: https://developer.mozilla.org/en-US/docs/Web/CSS/Subsequent-sibling_combinator*/
 p ~ ul, p ~ p:not(.info-card p):not(h3 ~ p):not(ul ~ p){
     margin-top:-2rem!important;
     margin-bottom:1rem !important;
@@ -198,6 +210,7 @@ p ~ ul, p ~ p:not(.info-card p):not(h3 ~ p):not(ul ~ p){
     Resources: 
         https://stackoverflow.com/questions/8679066/make-image-not-background-img-in-div-repeat
         https://www.w3schools.com/css/css_background_repeat.asp
+        https://developer.mozilla.org/en-US/docs/Web/CSS/background-position
 */
 .background-image{
     background-repeat: repeat-x;
@@ -219,19 +232,24 @@ p ~ ul, p ~ p:not(.info-card p):not(h3 ~ p):not(ul ~ p){
 
 /* Using the same media queries as grid-home.css */
 @media (width > 39.375rem){
-    main, header ul, h1, h1 ~ p, nav{
+    main, header ul, h1, h1 ~ p, .homepage-button{
         padding-left: 4.5rem;
         padding-right: 4.5rem;
-    }
-
-    header ul{
-        margin-top:4rem;
     }
 
     h1{
     /* Using tablet font size for heading h1 elements
         Reference: https://boosted.orange.com/docs/4.6/content/typography/ */
         font-size: 2.125rem;
+    }
+
+    .homepage-button{
+        margin-top:4rem;
+        font-size:1rem;
+    }
+
+    header ul{
+        margin-top: 4.5rem;
     }
 
     header p{
@@ -272,10 +290,6 @@ p ~ ul, p ~ p:not(.info-card p):not(h3 ~ p):not(ul ~ p){
 }
 
 @media (width > 56.875rem){
-    header ul{
-        margin-top:6rem;
-    }
-
     main{
         display:grid;
         grid-template-columns: 22rem 1fr;
@@ -326,7 +340,7 @@ p ~ ul, p ~ p:not(.info-card p):not(h3 ~ p):not(ul ~ p){
 }
 
 @media (width > 98.0625rem){
-    main, header ul, h1, h1 ~ p, nav{
+    main, header ul, h1, h1 ~ p, .homepage-button{
         padding-left: 10rem;
         padding-right: 10rem;
     }

@@ -1,3 +1,7 @@
+/* main-grid.css
+    CSS rules for grid usage in the main page, as well as media queries for the main page (index.html)
+	 ========================================================================== */
+
 *{
     box-sizing:border-box;
 }

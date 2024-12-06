@@ -1,3 +1,7 @@
+/* main.css
+    CSS rules for the landing page (index.html)
+	 ========================================================================== */
+
 /* 
     Colors:
         Darker green: #14795F
@@ -42,6 +46,8 @@ header section{
     width:100%;
     height:100%;
     object-fit:cover;
+    /* Shows the left side of the image when it is too large for the screen
+        Resource: https://developer.mozilla.org/en-US/docs/Web/CSS/object-position */
     object-position:left;
 }
 
@@ -160,6 +166,7 @@ main{
     background-color:#ECEDED;
     padding:1.5rem;
     position: relative;
+    /* Setting a min-height so that the page does not suddenly get shorter when using the category/type filters */
     min-height:80vh;
 }
 
@@ -172,13 +179,13 @@ main .text.light-gray{
 #clear-all{
     width:6rem;
     margin-left:auto;
+    padding-right:0;
     border:none;
     padding-bottom:none;
     cursor:pointer;
 }
 
 #clear-all:hover, #clear-all:focus{
-    text-decoration: underline;
     transition:0.2s;
     color:#14795F;
 }
@@ -210,8 +217,12 @@ main .text{
 
 .button.filter.search{
     width:100%;
+    position:relative;
+    z-index:100;
 }
 
+/* Changing the colour of the search input text on all browsers
+    Resource: https://stackoverflow.com/questions/9451902/changing-an-inputs-html5-placeholder-color-with-css-does-not-work-on-chrome */
 ::-webkit-input-placeholder {
     color:#4D4D4D;
 }
@@ -323,17 +334,9 @@ input[type="checkbox"]:hover + label {
     border-radius:0.25rem;
 }
 
-/* Styling the autocomplete options
-    Resource: https://css-tricks.com/snippets/css/change-autocomplete-styles-webkit-browsers/*/
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus {
-    border: 0.15rem solid #6F9E94;
-    
-}
-
 .results{
     margin-top:2.5rem;
+    margin-bottom:2.5rem;
 }
 
 /* Styling the "6 results" text */
@@ -342,6 +345,8 @@ input:-webkit-autofill:focus {
     font-weight:bold;
     font-size:1.125rem;
     margin:2.5rem 0 -1rem 0;
+    position:relative;
+    z-index:100;
 }
 
 /* Styling the text that says "No results found with the selected filters" */
@@ -372,16 +377,18 @@ input:-webkit-autofill:focus {
     background-color:white;
     border: 0.15rem solid #6F9E94;
     border-radius: 0.5rem;
-    z-index:99;
+    z-index:1000;
     top: calc(100% + 0.5rem);
     left:0;
     right:0;
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.18); /* Resource: https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
+    
 }
 
 .autocomplete-items div {
     padding: 1rem;
     cursor: pointer;
+    
 }
 
 .autocomplete-items div:hover, .autocomplete-active {
@@ -394,6 +401,7 @@ input:-webkit-autofill:focus {
 
 #searchInput-clear{
     position:absolute;
+    z-index:1000;
     top:0.75rem;
     right:1rem;
     background:none;
@@ -401,6 +409,7 @@ input:-webkit-autofill:focus {
     font-size:1.25rem;
     color: #B3B3B3;
     cursor:pointer;
+    padding:0;
     display:none;
 }
 
@@ -409,6 +418,7 @@ input:-webkit-autofill:focus {
     Resources: 
         https://stackoverflow.com/questions/8679066/make-image-not-background-img-in-div-repeat
         https://www.w3schools.com/css/css_background_repeat.asp
+        https://developer.mozilla.org/en-US/docs/Web/CSS/background-position
 */
 main .background-image{
     background-repeat: repeat-x;
