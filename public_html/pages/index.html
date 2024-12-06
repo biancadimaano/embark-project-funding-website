@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sustainability Project Funding</title>
+    <!-- Adding a Favicon, using the same leaf as the Embark Sustainability website favicon -->
+    <!-- Resource: https://www.w3schools.com/html/html_favicon.asp -->
+    <link rel="icon" type="image/x-icon" href="../images/ESS-Icon_Mark-RGB_Full_Colour.png">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/infocards.css">
@@ -31,7 +34,12 @@
                 <a href="funding-types.html" class="button light-green">What types of funding are available?</a> <!-- Redirects to the Funding Types page -->
             </nav>
         </section>
+        <!-- Empty alt text since the image is purely decorative -->
         <img src="../images/EmbarkSustainability_BurnabyLearningGarden_Soil.jpg" alt="" id="header-image" width="4500" height="3000">
+        <!-- Embark logo with link to Embark website -->
+        <a href="https://www.embarksustainability.org/">
+            <img src="../images/ESS-Primary_Logo-RGB_White.svg" alt="Embark Sustainability website homepage" id="embark-logo" width="1080" height="851">
+        </a>
      </header>
      <!-- END Header section -->
 
@@ -52,7 +60,7 @@
 
         <div class="text-above-filters">
             <p class="text light-gray">Sort by</p> <!-- Change to a button for JavaScript -->
-            <button id="clear-all" class="text green">Clear All</button> <!-- Change to a button for JavaScript -->
+            <button id="clear-all" class="text green" aria-label="Clear all filter selections and search inputs">Clear All</button> <!-- Change to a button for JavaScript -->
         </div>
         
         <div class="grid filter">
@@ -61,7 +69,7 @@
                 <!-- Using <details> to have a dropdown that can select multiple options -->
                 <details id="details-category" class="button filter category">
                     <summary>Category</summary>
-                    <div class="details open category" tabindex="0">
+                    <div class="details open category">
                         <!-- BIPOC -->
                         <input type="checkbox" id="bipoc" name="category" value="bipoc">
                         <label for="bipoc">BIPOC</label>
@@ -80,7 +88,11 @@
 
                         <!-- Emergency/Safety -->
                         <input type="checkbox" id="emergency-safety" name="category" value="emergency-safety">
-                        <label for="emergency-safety">Emergency/Safety</label>
+                        <label for="emergency-safety">
+                            <!-- Splitting Emegergency/Safety into two lines when there is not enough space in the dropdown div -->
+                            <!-- Reference from Andrew: https://codepen.io/andrewhaw/pen/oNOBWme/9460a31735b47586e3aea5853789b498 -->
+                            <span class="line-one">Emergency/</span><span class="line-two">Safety</span>
+                        </label>
 
                         <!-- Youth -->
                         <input type="checkbox" id="youth" name="category" value="youth">
@@ -113,6 +125,7 @@
                 <!-- Using aria-label to avoid the 'Avoid Browser Fallback' validator warning (https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/#naming_rule_avoid_fallback) -->
                 <!-- Resource: https://accessibilityinsights.io/info-examples/web/aria-input-field-name/ -->
                 <input type="text" autocomplete="off" id="searchInput" aria-label="Search Opportunity by Title" placeholder="Search by title..." class="button filter search">
+                <button id="searchInput-clear" aria-label="Clear the search input field">&#10006;</button>
             </div>
         </div>
 
