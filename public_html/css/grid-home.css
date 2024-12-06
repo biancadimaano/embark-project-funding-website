@@ -7,6 +7,10 @@
     row-gap:1rem;
 }
 
+.grid.filter{
+    column-gap:1.5rem
+}
+
 .text-above-filters{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -121,7 +125,7 @@ details div{
 
     header .grid{
         grid-template-columns: 1fr 1fr;
-        column-gap: 0.5rem;
+        column-gap: 1rem;
     }
 
     .info-card{
@@ -221,8 +225,8 @@ details div{
     }
 
     .grid.filter{
-        grid-template-columns: 1fr 2fr;
-        column-gap: 1rem;
+        /* Trying to match the column gap between the dropdowns and search bar with the info card column gap (Guess and check the fr values) */
+        grid-template-columns: 1.235fr 2.5fr;
     }
     
     .details.open{
