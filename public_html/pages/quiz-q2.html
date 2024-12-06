@@ -19,6 +19,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Jersey+20&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
+<!-- Using datasets to allow JavaScript to access information about this webpage, to be able to retrieve values for the quiz results
+    https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset
+    https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes -->
 <body data-page-type="quiz-q2">
     <div class="background-image top"></div>
 
@@ -30,56 +33,60 @@
     <!-- Resources: -->
         <!-- https://www.a11ymatters.com/pattern/checkbox/ -->
         <!-- https://www.w3schools.com/tags/tag_fieldset.asp -->
-    <fieldset class="quiz-choices" id="question-categories">
-        <!-- Page title -->
-        <legend>Funding category options</legend>
-        <p>Select all that apply</p>
+    <form>
+        <fieldset class="quiz-choices" id="question-categories">
+            <!-- Page title -->
+            <legend>Funding category options</legend>
+            <p>Select all that apply</p>
 
-        <!-- BIPOC -->
-        <div class="quiz-choices-item">
-            <input type="checkbox" id="bipoc" class="input-checkbox" name="category" value="bipoc">
-            <label for="bipoc">BIPOC</label>
-            <p>This funding opportunity prioritizes applications for projects or initiatives led by individuals/teams who are Black, Indigenous, and/or people of colour.</p>
-        </div>
+            <!-- BIPOC -->
+            <div class="quiz-choices-item">
+                <input type="checkbox" id="bipoc" class="input-checkbox" name="category" value="bipoc">
+                <label for="bipoc">BIPOC</label>
+                <p>This funding opportunity prioritizes applications for projects or initiatives led by individuals/teams who are Black, Indigenous, and/or people of colour.</p>
+            </div>
 
-        <!-- Clean Energy -->
-        <div class="quiz-choices-item">
-            <input type="checkbox" id="clean-energy" class="input-checkbox" name="category" value="clean-energy">
-            <label for="clean-energy">Clean Energy</label>
-            <p>Projects or initiatives that involve renewable energy technology or carbon emission reduction.</p>
-        </div>
+            <!-- Clean Energy -->
+            <div class="quiz-choices-item">
+                <input type="checkbox" id="clean-energy" class="input-checkbox" name="category" value="clean-energy">
+                <label for="clean-energy">Clean Energy</label>
+                <p>Projects or initiatives that involve renewable energy technology or carbon emission reduction.</p>
+            </div>
 
-        <!-- Climate -->
-        <div class="quiz-choices-item">
-            <input type="checkbox" id="climate" class="input-checkbox" name="category" value="climate">
-            <label for="climate">Climate</label>
-            <p>Projects or initiatives related to climate solutions.</p>
-        </div>
+            <!-- Climate -->
+            <div class="quiz-choices-item">
+                <input type="checkbox" id="climate" class="input-checkbox" name="category" value="climate">
+                <label for="climate">Climate</label>
+                <p>Projects or initiatives related to climate solutions.</p>
+            </div>
 
-        <!-- Community -->
-        <div class="quiz-choices-item">
-            <input type="checkbox" id="community" class="input-checkbox" name="category" value="community">
-            <label for="community">Community</label>    
-            <p>Projects or initiatives that support community building or are by-and-for a particular community.</p>
-        </div>
+            <!-- Community -->
+            <div class="quiz-choices-item">
+                <input type="checkbox" id="community" class="input-checkbox" name="category" value="community">
+                <label for="community">Community</label>    
+                <p>Projects or initiatives that support community building or are by-and-for a particular community.</p>
+            </div>
 
-        <!-- Emergency/Safety -->
-        <div class="quiz-choices-item">
-            <input type="checkbox" id="emergency-safety" class="input-checkbox" name="category" value="emergency-safety">
-            <label for="emergency-safety">Emergency/Safety</label>
-            <p>Projects or initiatives that focus on crisis response and community safety. Applicable for projects related to extreme weather events and other climate adaptation measures.</p>
-        </div>
-        
-        <!-- Youth -->
-        <div class="quiz-choices-item">
-            <input type="checkbox" id="youth" class="input-checkbox" name="category" value="youth">
-            <label for="youth">Youth</label>
-            <p>Projects or initiatives from individuals under 30 years old and/or projects or initiatives that support individuals under 30 years old.</p>
-        </div>
-    </fieldset>
-    
+            <!-- Emergency/Safety -->
+            <div class="quiz-choices-item">
+                <input type="checkbox" id="emergency-safety" class="input-checkbox" name="category" value="emergency-safety">
+                <label for="emergency-safety">Emergency/Safety</label>
+                <p>Projects or initiatives that focus on crisis response and community safety. Applicable for projects related to extreme weather events and other climate adaptation measures.</p>
+            </div>
+            
+            <!-- Youth -->
+            <div class="quiz-choices-item">
+                <input type="checkbox" id="youth" class="input-checkbox" name="category" value="youth">
+                <label for="youth">Youth</label>
+                <p>Projects or initiatives from individuals under 30 years old and/or projects or initiatives that support individuals under 30 years old.</p>
+            </div>
+        </fieldset>
+    </form>
 
     <nav>
+        <!-- Using datasets to allow JavaScript to access information about this webpage, to be able to retrieve values for the quiz results
+            https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset
+            https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes -->
         <a href="quiz-q3.html" class="button green" data-next-page="quiz-q3.html">Next Question</a>
         <a href="quiz-q1.html" class="button light-green">Previous Question</a>
     </nav>

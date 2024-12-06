@@ -19,6 +19,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Jersey+20&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
+<!-- Using datasets to allow JavaScript to access information about this webpage, to be able to retrieve values for the quiz results
+    https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset
+    https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes -->
 <body data-page-type="quiz-q3">
     <div class="background-image top"></div>
 
@@ -30,31 +33,35 @@
     <!-- Resources: -->
         <!-- https://www.a11ymatters.com/pattern/checkbox/ -->
         <!-- https://www.w3schools.com/tags/tag_fieldset.asp -->
-    <fieldset class="quiz-choices" id="question-types">
-        <legend>Funding type options</legend>
-        <p>Select all that apply</p>
-        <!-- Grants -->
-        <div class="quiz-choices-item">
-            <input type="checkbox" id="grant" class="input-checkbox" name="type" value="grant">
-            <label for="grant">Grants</label>
-            <p>Provide funding for a project or initiative through a grant application process</p>
-        </div>
-        <!-- Awards -->
-        <div class="quiz-choices-item">
-            <input type="checkbox" id="award" class="input-checkbox" name="type" value="award">
-            <label for="award">Awards</label>
-            <p>Provide funding with the expectation that the applicants participate in a specific program or initiative to receive the funding.</p>
-        </div>
-        <!-- Programs -->
-        <div class="quiz-choices-item">
-            <input type="checkbox" id="program" class="input-checkbox" name="type" value="program">
-            <label for="program">Programs</label>   
-            <p>Provide funding to those nominated for an award based on past work or accomplishments, with the thought that students can apply that award money to the projects they are seeking to fund.</p>
-        </div>
-    </fieldset> 
-
+    <form>
+        <fieldset class="quiz-choices" id="question-types">
+            <legend>Funding type options</legend>
+            <p>Select all that apply</p>
+            <!-- Grants -->
+            <div class="quiz-choices-item">
+                <input type="checkbox" id="grant" class="input-checkbox" name="type" value="grant">
+                <label for="grant">Grants</label>
+                <p>Provide funding for a project or initiative through a grant application process</p>
+            </div>
+            <!-- Awards -->
+            <div class="quiz-choices-item">
+                <input type="checkbox" id="award" class="input-checkbox" name="type" value="award">
+                <label for="award">Awards</label>
+                <p>Provide funding with the expectation that the applicants participate in a specific program or initiative to receive the funding.</p>
+            </div>
+            <!-- Programs -->
+            <div class="quiz-choices-item">
+                <input type="checkbox" id="program" class="input-checkbox" name="type" value="program">
+                <label for="program">Programs</label>   
+                <p>Provide funding to those nominated for an award based on past work or accomplishments, with the thought that students can apply that award money to the projects they are seeking to fund.</p>
+            </div>
+        </fieldset> 
+    </form>
     <nav>
-        <a href="quiz-see-results.html" class="button green" data-next-page="quiz-results.html">Next Question</a>
+        <!-- Using datasets to allow JavaScript to access information about this webpage, to be able to retrieve values for the quiz results
+            https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset
+            https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes -->
+        <a href="quiz-results.html" class="button green" data-next-page="quiz-results.html">Next Question</a>
         <a href="quiz-q2.html" class="button light-green">Previous Question</a>
     </nav>
 
